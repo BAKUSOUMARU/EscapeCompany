@@ -26,8 +26,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        Move();
-        
+        Move();    
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
