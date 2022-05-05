@@ -16,11 +16,15 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] bool _isGround = false;
     
-    Rigidbody2D rd;
-    Vector2 _dir;
+    Rigidbody2D _rd;
+    Animator _anim;
+    SpriteRenderer _sp;
     void Start()
     {
-        rd = GetComponent<Rigidbody2D>();
+        _rd = GetComponent<Rigidbody2D>();
+        _anim = GetComponent<Animator>();
+        _sp = GetComponent<SpriteRenderer>();
+        
     }
 
     // Update is called once per frame
@@ -35,6 +39,11 @@ public class PlayerController : MonoBehaviour
         {
             _isGround = true;
         }
+        if (collision.gameObject.tag == "Goal")
+        {
+            GameManager.instance.GameClear();
+            GameManager.instance._EnemyStop = true;
+        }
 
     }
 
@@ -47,20 +56,35 @@ public class PlayerController : MonoBehaviour
         float HorizontalKey = Input.GetAxis("Horizontal");
         float JumpKey = Input.GetAxis("Jump");
         Debug.Log(_isGround);
-
+        if (!GameManager.instance._playerStop)
+        {
             if (HorizontalKey > 0)
             {
-                rd.velocity = new Vector2(HorizontalKey * _Speed, rd.velocity.y);
+                _rd.velocity = new Vector2(HorizontalKey * _Speed, _rd.velocity.y);
+                _anim.SetBool("run", true);
+                _sp.flipX = false;
+            }
+            else if (HorizontalKey < 0)
+            {
+                _rd.velocity = new Vector2(HorizontalKey * _Speed, _rd.velocity.y);
+                _anim.SetBool("run", true);
+                _sp.flipX = true;
             }
             else
             {
-                rd.velocity = Vector2.zero; 
-            }
+                _rd.velocity = Vector2.zero;
+                _anim.SetBool("run", false);
+            }   
 
             if (JumpKey > 0 && _isGround)
             {
-             rd.AddForce(Vector2.up * _jump, ForceMode2D.Impulse);
-            _isGround = false;
+                _rd.AddForce(Vector2.up * _jump, ForceMode2D.Impulse);
+                _isGround = false;
             }
+        }
+        else
+        {
+            _anim.SetBool("run", false);
+        }
     }
 }

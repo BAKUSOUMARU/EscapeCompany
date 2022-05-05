@@ -12,24 +12,37 @@ public class EnemyController : MonoBehaviour
 
     [SerializeField]
     [Header("ˆÚ“®‘¬“x")]
-    float _speed = 2;
+    public float _speed = 2;
 
 
     Rigidbody2D _rd;
-
+    Animator _anim;
     // Start is called before the first frame update
     void Start()
     {
         _rd = GetComponent<Rigidbody2D>();
+        _anim = GetComponent<Animator>();
     }
 
     void FixedUpdate()
     {
         EnemyMove();
     }
+    /// <summary>
+    /// Enemy‚Ì“®‚«‚Ìˆ—
+    /// </summary>
     void EnemyMove()
     {
-        _rd.velocity = _dir.normalized * _speed;
+        if (!GameManager.instance._EnemyStop)
+        {
+         _rd.velocity = _dir.normalized * _speed;
+        }
+        else
+        {
+            _rd.velocity = _dir.normalized * 0;
+            _anim.SetBool("Move", false);
+        }
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -40,8 +53,7 @@ public class EnemyController : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Destroy(collision.gameObject);
-            GameManager.instance._gameFlag = true;
+            GameManager.instance.GameOver();        
         }
-
     }
 }

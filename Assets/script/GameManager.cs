@@ -6,35 +6,50 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] Text _gameText;
-    
-    public bool _gameFlag = false;
+    [SerializeField] 
+    [Header("ゲームオーバー時に出てくるテキスト")]
+    Text _gameOverText;
+
+    [SerializeField]
+    [Header("ゲームクリア時に出てくるテキスト")]
+    Text _gameClearText;
+
+    [Header("Enemyを止めるのを検知するフラグ")]
+    public bool _EnemyStop = false;
+
+    public bool _playerStop = false;
+   
     public static GameManager instance;
-    
+
+       
      void Awake()
     {
         if (instance  == null)
         {
             instance = this;
-            DontDestroyOnLoad(this.gameObject);
         }
         else
         {
             Destroy(this.gameObject);
         }
     }
-    private void Update()
+
+   
+
+    /// <summary>
+    /// ゲームオーバーの処理
+    /// </summary>
+    public void GameOver()
     {
-        GaneOver();
+        Debug.Log("ゲーム終了");
+        _gameOverText.gameObject.SetActive(true);       
     }
-
-
-    public void GaneOver()
+    /// <summary>
+    /// ゲームクリアの処理
+    /// </summary>
+    public void GameClear()
     {
-        if (_gameFlag)
-        {
-            Debug.Log("ゲーム終了");
-            _gameText.gameObject.SetActive(true);
-        }
+        _gameClearText.gameObject.SetActive(true);
+        _playerStop = true;
     }
 }
