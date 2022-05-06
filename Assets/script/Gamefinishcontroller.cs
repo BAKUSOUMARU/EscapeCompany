@@ -27,10 +27,10 @@ public class Gamefinishcontroller : MonoBehaviour
         switch (gamefinishmode)
         {
             case Gamefinishmode.GameOver:
-                _timertext.text = GameManager.instance._timer.ToString("F2");
+                _timertext.text = "Ÿ‚Í‘ŞE‚·‚é‚ñ‚¾II";
                 break;
             case Gamefinishmode.GameClear:
-                _timertext.text = GameManager.instance._timer.ToString("F2");
+                _timertext.text = "‘ŞE‚Ü‚Å‚ÌŠÔ"+GameManager.instance._timer.ToString("F2");
                 break;
             default:
                 break;

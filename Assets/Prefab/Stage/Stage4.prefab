@@ -107,7 +107,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.34, y: 3.58}
+  m_Size: {x: 4.5, y: 3.58}
   m_EdgeRadius: 0
 --- !u!1 &5903204616732602640
 GameObject:
@@ -250,7 +250,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.34, y: 3.58}
+  m_Size: {x: 4.5, y: 3.58}
   m_EdgeRadius: 0
 --- !u!1 &7213259402363564884
 GameObject:
@@ -359,7 +359,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.34, y: 3.58}
+  m_Size: {x: 4.5, y: 3.58}
   m_EdgeRadius: 0
 --- !u!1001 &1357683725028783103
 PrefabInstance:
