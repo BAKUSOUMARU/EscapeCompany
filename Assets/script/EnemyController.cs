@@ -17,7 +17,7 @@ public class EnemyController : MonoBehaviour
 
     Rigidbody2D _rd;
     Animator _anim;
-    // Start is called before the first frame update
+   
     void Start()
     {
         _rd = GetComponent<Rigidbody2D>();

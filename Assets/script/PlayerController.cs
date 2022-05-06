@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     [Header("playerのジャンプ力")]
     float _jump = 2f;
 
+    [Header("地面を判定するフラグ")]
     [SerializeField] bool _isGround = false;
     
     Rigidbody2D _rd;

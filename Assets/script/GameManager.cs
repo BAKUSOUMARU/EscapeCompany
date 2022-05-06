@@ -6,23 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-   
-
-    [SerializeField] 
-    [Header("ゲームオーバー時に出てくるテキスト")]
-    Text _gameOverText;
-
-    [SerializeField]
-    [Header("ゲームクリア時に出てくるテキスト")]
-    Text _gameClearText;
 
     public float _timer = 0;
 
+    [Header("タイマーを止めるフラグ")]
     public bool _stoptimer = false;
 
     [Header("Enemyを止めるのを検知するフラグ")]
     public bool _EnemyStop = false;
 
+    [Header("playerを止めるのを検知するフラグ")]
     public bool _playerStop = false;
    
     public static GameManager instance;
@@ -33,7 +26,7 @@ public class GameManager : MonoBehaviour
         if (instance  == null)
         {
             instance = this;
-            DontDestroyOnLoad(this.gameObject);
+            DontDestroyOnLoad(this);
         }
         else
         {
@@ -47,7 +40,6 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Debug.Log("ゲーム終了");
-        _gameOverText.gameObject.SetActive(true);
         _stoptimer = true;
         SceneManager.LoadScene("GameOver");
     }
@@ -56,7 +48,6 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void GameClear()
     {
-        _gameClearText.gameObject.SetActive(true);
         _stoptimer = true;
         _playerStop = true;
         SceneManager.LoadScene("GameClear");

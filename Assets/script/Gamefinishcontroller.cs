@@ -3,13 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
+/// <summary>
+/// ゲーム終了時の処理
+/// </summary>
 public class Gamefinishcontroller : MonoBehaviour
 {
-    [SerializeField] Text _timertext;
+
+    [SerializeField]
+    [Header("ゲーム終了時の時間を表示させるText")]
+    Text _timertext;
+
+    [SerializeField]
+    [Header("ゲーム終了時後の処理の変更")]
     Gamefinishmode gamefinishmode;
-    // Start is called before the first frame update
+    
     void Start()
+    {
+        GameFinish();
+    }
+
+    public void GameFinish()
     {
         switch (gamefinishmode)
         {
@@ -22,14 +35,12 @@ public class Gamefinishcontroller : MonoBehaviour
             default:
                 break;
         }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
-
+    
+    /// <summary>
+    /// ゲーム終了時後の処理切り替え
+    /// </summary>
     enum Gamefinishmode
     {
         GameOver,

@@ -5,26 +5,22 @@ using UnityEngine.UI;
 
 public class timercontroller : MonoBehaviour
 {
-    [SerializeField] Text _scoreText;
-
-   
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+   　
+    [SerializeField]
+    [Header("ゲームプレイ中のtimerを表示させるText")]
+    Text _gameplaytimerText;
+    
     private void Update()
     {
         Timer();
     }
+    
     public void Timer()
     {
         if (!GameManager.instance._stoptimer)
         {
             GameManager.instance._timer += Time.deltaTime;
-            _scoreText.text = GameManager.instance._timer.ToString("F2");
+            _gameplaytimerText.text = GameManager.instance._timer.ToString("F2");
         }
 
     }
