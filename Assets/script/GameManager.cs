@@ -23,6 +23,9 @@ public class GameManager : MonoBehaviour
     [Header("ゲームクリア時に出てくるテキスト")]
     Text _gameClearText;
 
+    [SerializeField] Text _scoreText;
+
+    [SerializeField] float _score = 0;
     [Header("Enemyを止めるのを検知するフラグ")]
     public bool _EnemyStop = false;
 
@@ -44,17 +47,20 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
+        
         if ( _stagecount /5 >0)
         {
             _addBackseason += _stagecount / 4;
         }
         Debug.Log(_addBackseason);
-        StageSpawn();
         BackScreenSpawn();
+        StageSpawn();
     }
 
     private void Update()
     {
+        _score += Time.deltaTime;
+        Debug.Log(_score);
     }
 
 
@@ -64,14 +70,15 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < _stagecount; i++)
         {
             int randomIndex = Random.Range(0, _stage.Length);
-            Instantiate(_stage[randomIndex], new Vector2(_stageSpawninterval, -5f), transform.rotation);
+            Instantiate(_stage[randomIndex], new Vector2(_stageSpawninterval, 0), transform.rotation);
             _stageSpawninterval += 18f;
         }
-        Instantiate(_goalObject, new Vector2(_stageSpawninterval, -5f), transform.rotation);
+        Instantiate(_goalObject, new Vector2(_stageSpawninterval, 0), transform.rotation);
     }
 
     public void BackScreenSpawn()
     {
+        Debug.Log("出たよ");
         _backScreenSpawnimterval = (float)-14.5;
         for (int i = 0; i < _stagecount + _addBackseason; i++)
         {

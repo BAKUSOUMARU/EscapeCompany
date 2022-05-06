@@ -39,6 +39,11 @@ public class PlayerController : MonoBehaviour
         {
             _isGround = true;
         }
+
+       ///if (collision.gameObject.tag == "Object")
+        ///{
+            ///_isGround = true;
+        ///}
         if (collision.gameObject.tag == "Goal")
         {
             GameManager.instance.GameClear();

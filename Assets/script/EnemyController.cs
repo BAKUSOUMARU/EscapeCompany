@@ -53,7 +53,7 @@ public class EnemyController : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Destroy(collision.gameObject);
-            GameManager.instance.GameOver();        
+            GameManager.instance.GameOver(); 
         }
     }
 }
