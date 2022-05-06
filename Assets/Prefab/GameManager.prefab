@@ -43,4 +43,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16c869367368a804496261245457f2f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameFlag: 0
+  _stage:
+  - {fileID: 0}
+  - {fileID: 0}
+  _goalObject: {fileID: 0}
+  _stageSpawninterval: 0
+  _backScreenSpawnimterval: 0
+  _backscreen: {fileID: 0}
+  _gameOverText: {fileID: 0}
+  _gameClearText: {fileID: 0}
+  _EnemyStop: 0
+  _playerStop: 0
