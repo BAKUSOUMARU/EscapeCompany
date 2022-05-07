@@ -17,11 +17,18 @@ public class GameManager : MonoBehaviour
 
     [Header("playerを止めるのを検知するフラグ")]
     public bool _playerStop = false;
-   
+
+    [Header("freelevelをオンにするか")]
+    public bool _isfreelevel = false;
+
+    [Header("生成するステージの数")]
+    public int _stagecount;
+
+    public int  _freelevel;
+    
     public static GameManager instance;
 
-       
-     void Awake()
+    void Awake()
     {
         if (instance  == null)
         {

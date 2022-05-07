@@ -354,7 +354,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u30B2\u30FC\u30E0\u7D42\u4E86"
+  m_Text: "\u30B9\u30C6\u30FC\u30B8\u9078\u629E"
 --- !u!222 &639199241
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -812,8 +812,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d930e65b70e74ba4fad1ee2a4bdd3f73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scene: GaneScenes1
-  _gameLoadModo: 2
+  _scene: StageSelect
+  _gameLoadModo: 1
 --- !u!114 &897971093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -867,7 +867,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: GaneScenes1
+          m_StringArgument: StageSelect
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &897971094
