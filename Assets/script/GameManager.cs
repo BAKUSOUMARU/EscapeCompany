@@ -9,9 +9,6 @@ public class GameManager : MonoBehaviour
 
     public float _timer = 0;
 
-    [Header("タイマーを止めるフラグ")]
-    public bool _stoptimer = false;
-
     [Header("Enemyを止めるのを検知するフラグ")]
     public bool _EnemyStop = false;
 
@@ -25,6 +22,8 @@ public class GameManager : MonoBehaviour
     public int _stagecount;
 
     public int  _freelevel;
+
+    public bool _startTimer = false;
     
     public static GameManager instance;
 
@@ -47,7 +46,6 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Debug.Log("ゲーム終了");
-        _stoptimer = true;
         SceneManager.LoadScene("GameOver");
     }
     /// <summary>
@@ -55,7 +53,6 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void GameClear()
     {
-        _stoptimer = true;
         _playerStop = true;
         SceneManager.LoadScene("GameClear");
     }

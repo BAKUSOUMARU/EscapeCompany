@@ -25,7 +25,8 @@ public class PlayerController : MonoBehaviour
         _rd = GetComponent<Rigidbody2D>();
         _anim = GetComponent<Animator>();
         _sp = GetComponent<SpriteRenderer>();
-        
+        GameManager.instance._playerStop = true;
+
     }
 
     // Update is called once per frame
@@ -40,11 +41,6 @@ public class PlayerController : MonoBehaviour
         {
             _isGround = true;
         }
-
-       ///if (collision.gameObject.tag == "Object")
-        ///{
-            ///_isGround = true;
-        ///}
         if (collision.gameObject.tag == "Goal")
         {
             GameManager.instance.GameClear();

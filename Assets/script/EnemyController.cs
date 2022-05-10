@@ -22,6 +22,7 @@ public class EnemyController : MonoBehaviour
     {
         _rd = GetComponent<Rigidbody2D>();
         _anim = GetComponent<Animator>();
+        GameManager.instance._EnemyStop = true;
     }
 
     void FixedUpdate()
