@@ -943,6 +943,9 @@ MonoBehaviour:
   - {fileID: 8283974771041137648, guid: 2c2cfe39fe5446e46a48884e96d545bb, type: 3}
   - {fileID: 7024301197886246601, guid: 85a8174e14462194994b6d50a82be76d, type: 3}
   - {fileID: 5903204616732602640, guid: de9cf70831a2dd749995c11b625a2fbd, type: 3}
+  - {fileID: 321286019978247052, guid: d193eee16708c8241b081ada5641153b, type: 3}
+  - {fileID: 7372748036096385307, guid: 9def5a3e5fceef049a7fb9bc82ece358, type: 3}
+  - {fileID: 8695481857368053826, guid: 60e22ebd901f98344a1d2dd36f1e3552, type: 3}
   _goalObject: {fileID: 160716810359771639, guid: aeaf2ef7a8ed46d44a9a7d867a338545, type: 3}
   _backscreen: {fileID: 4899557744273472370, guid: 43eea585b664d9647848c53fce7239ae, type: 3}
   _addBackseason: 3
@@ -1400,7 +1403,7 @@ PrefabInstance:
       objectReference: {fileID: 4899557744273472370, guid: 43eea585b664d9647848c53fce7239ae, type: 3}
     - target: {fileID: 3260238381792224807, guid: 74209486059fae042ac64c41c57df4f4, type: 3}
       propertyPath: _stagecount
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3260238381792224807, guid: 74209486059fae042ac64c41c57df4f4, type: 3}
       propertyPath: _gameOverText

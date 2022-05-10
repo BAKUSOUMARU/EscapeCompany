@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     public int  _freelevel;
 
     public bool _startTimer = false;
-    
+
     public static GameManager instance;
 
     void Awake()
@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
     /// ƒQ[ƒ€ƒNƒŠƒA‚Ìˆ—
     /// </summary>
     public void GameClear()
-    {
+    {   
         _playerStop = true;
         SceneManager.LoadScene("GameClear");
     }

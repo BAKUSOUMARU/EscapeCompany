@@ -37,7 +37,7 @@ public class Sceneloader : MonoBehaviour
                 SceneManager.LoadScene(scene);
                 GameManager.instance._timer = 0;
                 GameManager.instance._EnemyStop = false;
-                GameManager.instance._playerStop = false;                
+                GameManager.instance._playerStop = false;
                 switch (_stagelevel)
                 {
                     case stagelevel.Normal:
