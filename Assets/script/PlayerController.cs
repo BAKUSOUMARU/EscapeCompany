@@ -26,7 +26,6 @@ public class PlayerController : MonoBehaviour
         _anim = GetComponent<Animator>();
         _sp = GetComponent<SpriteRenderer>();
         GameManager.instance._playerStop = true;
-
     }
 
     // Update is called once per frame
