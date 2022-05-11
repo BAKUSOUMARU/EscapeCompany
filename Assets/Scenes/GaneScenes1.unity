@@ -219,7 +219,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9727ac4d0fa6d664fbda0bba0d74125e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.465
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -493,49 +493,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &299208058
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 299208060}
-  - component: {fileID: 299208059}
-  m_Layer: 0
-  m_Name: GameObject (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &299208059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 299208058}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd4836192df09d14a843a885d98c9856, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &299208060
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 299208058}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &326290564
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,7 +537,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &472670144
 GameObject:
@@ -676,7 +633,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8534483335289712983, guid: 1013f2dba5a104143a2bf6848bc5bb45, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8534483335289712983, guid: 1013f2dba5a104143a2bf6848bc5bb45, type: 3}
       propertyPath: m_LocalPosition.x
@@ -907,7 +864,7 @@ Transform:
   m_Children:
   - {fileID: 1918801965}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &611715517
 GameObject:
@@ -946,6 +903,9 @@ MonoBehaviour:
   - {fileID: 321286019978247052, guid: d193eee16708c8241b081ada5641153b, type: 3}
   - {fileID: 7372748036096385307, guid: 9def5a3e5fceef049a7fb9bc82ece358, type: 3}
   - {fileID: 8695481857368053826, guid: 60e22ebd901f98344a1d2dd36f1e3552, type: 3}
+  - {fileID: 1066633154355298008, guid: 05e969998b8a4084d812023d496bed69, type: 3}
+  - {fileID: 1974417831816266707, guid: c3c3783f4f373a441b604ff0801048f7, type: 3}
+  - {fileID: 627671389044201660, guid: 93beed2a2382926479c4801d9d3a415c, type: 3}
   _goalObject: {fileID: 160716810359771639, guid: aeaf2ef7a8ed46d44a9a7d867a338545, type: 3}
   _backscreen: {fileID: 4899557744273472370, guid: 43eea585b664d9647848c53fce7239ae, type: 3}
   _addBackseason: 3
@@ -961,7 +921,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1055267217 stripped
 Transform:
