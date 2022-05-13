@@ -44,7 +44,7 @@ public class Sceneloader : MonoBehaviour
                 break;
             
             case GameLoadModo.Exit:
-                UnityEditor.EditorApplication.isPlaying = false;
+               // UnityEditor.EditorApplication.isPlaying = false;
                 Application.Quit();
                 break;
             case GameLoadModo.select:
