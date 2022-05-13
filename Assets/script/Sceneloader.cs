@@ -8,10 +8,21 @@ public class Sceneloader : MonoBehaviour
 {
     [SerializeField] string _scene = default;
     [SerializeField] GameLoadModo _gameLoadModo;
-    [SerializeField]
-    public Text _inpottext;
+    [SerializeField] Text _inpottext;
     [SerializeField] stagelevel _stagelevel;
-    public void Seasonroad(string scene)
+    [SerializeField] float _roadtime;
+
+    private void Update()
+    {
+        if (_gameLoadModo != GameLoadModo.Autoroad) return;
+        _roadtime -= Time.deltaTime;
+        if (_roadtime < 0 )
+        {
+            SceneManager.LoadScene(_scene);
+        }
+    }
+
+    public void Sceneroad(string scene)
     {
         switch (_gameLoadModo)
         {
@@ -22,8 +33,12 @@ public class Sceneloader : MonoBehaviour
                 GameManager.instance._EnemyStop = false;
                 GameManager.instance._playerStop = false;
                 break;
+
+            case GameLoadModo.normalroad:
+                SceneManager.LoadScene(scene);
+                break;
             
-            case GameLoadModo.NormalRoad:
+            case GameLoadModo.titlelRoad:
                 SceneManager.LoadScene(scene);
                 GameManager.instance._isfreelevel = false;
                 break;
@@ -32,7 +47,6 @@ public class Sceneloader : MonoBehaviour
                 UnityEditor.EditorApplication.isPlaying = false;
                 Application.Quit();
                 break;
-            
             case GameLoadModo.select:
                 SceneManager.LoadScene(scene);
                 GameManager.instance._timer = 0;
@@ -58,9 +72,11 @@ public class Sceneloader : MonoBehaviour
     enum GameLoadModo
     {
         retry,
-        NormalRoad,
+        normalroad,
+        titlelRoad,
         Exit,
-        select
+        select,
+        Autoroad
     }
     enum stagelevel
     {

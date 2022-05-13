@@ -179,6 +179,7 @@ MonoBehaviour:
   _gameLoadModo: 2
   _inpottext: {fileID: 0}
   _stagelevel: 0
+  _roadtime: 0
 --- !u!114 &110748215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,7 +226,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 110748214}
         m_TargetAssemblyTypeName: Sceneloader, Assembly-CSharp
-        m_MethodName: Seasonroad
+        m_MethodName: Sceneroad
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -668,6 +669,7 @@ MonoBehaviour:
   _gameLoadModo: 1
   _inpottext: {fileID: 0}
   _stagelevel: 0
+  _roadtime: 0
 --- !u!114 &723619161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -714,7 +716,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 723619160}
         m_TargetAssemblyTypeName: Sceneloader, Assembly-CSharp
-        m_MethodName: Seasonroad
+        m_MethodName: Sceneroad
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
