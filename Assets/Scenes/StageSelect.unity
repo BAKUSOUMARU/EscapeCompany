@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scene: GaneScenes1
-  _gameLoadModo: 3
+  _gameLoadModo: 4
   _inpottext: {fileID: 0}
   _stagelevel: 0
   _roadtime: 0
@@ -1307,7 +1307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scene: GaneScenes1
-  _gameLoadModo: 3
+  _gameLoadModo: 4
   _inpottext: {fileID: 0}
   _stagelevel: 1
   _roadtime: 0
@@ -1776,7 +1776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scene: GaneScenes1
-  _gameLoadModo: 3
+  _gameLoadModo: 4
   _inpottext: {fileID: 1345206245}
   _stagelevel: 2
   _roadtime: 0

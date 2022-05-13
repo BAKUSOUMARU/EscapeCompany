@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scene: Title
-  _gameLoadModo: 4
+  _gameLoadModo: 5
   _inpottext: {fileID: 0}
   _stagelevel: 0
   _roadtime: 10
