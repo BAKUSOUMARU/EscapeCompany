@@ -20,22 +20,18 @@ public class Stagecontroller : MonoBehaviour
     [Header("©“®¶¬‚Å‘«‚è‚È‚¢•ª‚Ì”wŒi‚ğ’Ç‰Á‚·‚é”")]
     int _addBackseason = 3;
 
-    /// <summary>
-    /// ¶¬‚·‚éƒXƒe[ƒW‚ÌŠÔŠu
-    /// </summary>
-    private float _stageSpawninterval;
+   
+    float _stageSpawninterval;
     
-    /// <summary>
-    /// ¶¬‚·‚é”wŒi‚ÌŠÔŠu
-    /// </summary>
-    private float _backScreenSpawnimterval;
+
+    float _backScreenSpawnimterval;
 
 
     private void Start()
     {
-        if (GameManager.instance._isfreelevel)
+        if (GameManager.instance.isfreelevel)
         {
-            GameManager.instance._stagecount = GameManager.instance._freelevel;
+            GameManager.instance.stagecount = GameManager.instance.freelevel;
         }
         BackScreenSpawn();
         StageSpawn();
@@ -47,7 +43,7 @@ public class Stagecontroller : MonoBehaviour
     public void StageSpawn()
     {
         _stageSpawninterval = 0;
-        for (int i = 0; i < GameManager.instance._stagecount; i++)
+        for (int i = 0; i < GameManager.instance.stagecount; i++)
         {
             int randomIndex = Random.Range(0, _stage.Length);
             Instantiate(_stage[randomIndex], new Vector2(_stageSpawninterval, 0), transform.rotation);
@@ -63,14 +59,14 @@ public class Stagecontroller : MonoBehaviour
     /// </summary>
     public void BackScreenSpawn()
     {
-        if (GameManager.instance._stagecount / 5 > 0)
+        if (GameManager.instance.stagecount / 5 > 0)
         {
-            _addBackseason += GameManager.instance._stagecount / 4;
+            _addBackseason += GameManager.instance.stagecount / 4;
         }
         Debug.Log("o‚½‚æ");
         _backScreenSpawnimterval = (float)-14.5;
         
-        for (int i = 0; i < GameManager.instance._stagecount + _addBackseason; i++)
+        for (int i = 0; i < GameManager.instance.stagecount + _addBackseason; i++)
         {
             Instantiate(_backscreen, new Vector3(_backScreenSpawnimterval, 0f, 10f), transform.rotation);
             _backScreenSpawnimterval += (float)14.5;

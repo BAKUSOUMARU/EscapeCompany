@@ -6,27 +6,33 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
+    [Header("ゲームスタートしてからの時間")]
     public float _timer = 0;
 
     [Header("Enemyを止めるのを検知するフラグ")]
-    public bool _EnemyStop = false;
+    public bool enemyStop = false;
 
     [Header("playerを止めるのを検知するフラグ")]
-    public bool _playerStop = false;
+    public bool playerStop = false;
 
     [Header("freelevelをオンにするか")]
-    public bool _isfreelevel = false;
+    public bool isfreelevel = false;
 
     [Header("生成するステージの数")]
-    public int _stagecount;
+    public int stagecount;
 
-    public int  _freelevel;
+    [Header("フリーレベルのステージを出す数")]
+    public int  freelevel;
 
-    public bool _startTimer = false;
+    [Header("タイマーをスタートさせるフラグ")]
+    public bool startTimer = false;
 
     public static GameManager instance;
-
+   
+    /// <summary>
+    ///ゲームマネージャーをscene内に一つだけ存在するようにする処理
+    ///とDontDestroyOnLoadを呼ぶ処理
+    /// </summary>
     void Awake()
     {
         if (instance  == null)
@@ -53,7 +59,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void GameClear()
     {   
-        _playerStop = true;
+        playerStop = true;
         SceneManager.LoadScene("GameClear");
     }
 }

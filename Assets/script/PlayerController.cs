@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     float _jump = 2f;
 
     [Header("’n–Ê‚ð”»’è‚·‚éƒtƒ‰ƒO")]
-    [SerializeField] bool _isGround = false;
+    bool _isGround = false;
     
     Rigidbody2D _rd;
     Animator _anim;
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
         _rd = GetComponent<Rigidbody2D>();
         _anim = GetComponent<Animator>();
         _sp = GetComponent<SpriteRenderer>();
-        GameManager.instance._playerStop = true;
+        GameManager.instance.playerStop = true;
     }
 
     // Update is called once per frame
@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Goal")
         {
             GameManager.instance.GameClear();
-            GameManager.instance._EnemyStop = true;
+            GameManager.instance.enemyStop = true;
         }
 
     }
@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
         float HorizontalKey = Input.GetAxis("Horizontal");
         float JumpKey = Input.GetAxis("Jump");
         Debug.Log(_isGround);
-        if (!GameManager.instance._playerStop)
+        if (!GameManager.instance.playerStop)
         {
             if (HorizontalKey > 0)
             {

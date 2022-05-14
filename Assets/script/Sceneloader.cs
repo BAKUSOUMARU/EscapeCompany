@@ -6,11 +6,20 @@ using UnityEngine.UI;
 
 public class Sceneloader : MonoBehaviour
 {
-    [SerializeField] string _scene = default;
-    [SerializeField] GameLoadModo _gameLoadModo;
-    [SerializeField] Text _inpottext;
-    [SerializeField] stagelevel _stagelevel;
-    [SerializeField] float _roadtime;
+    [SerializeField] 
+    string _scene = default;
+    
+    [SerializeField]
+    GameLoadModo _gameLoadModo;
+    
+    [SerializeField]
+    Text _inpottext;
+    
+    [SerializeField] 
+    stagelevel _stagelevel;
+    
+    [SerializeField]
+    float _roadtime;
 
     private void Update()
     {
@@ -30,8 +39,8 @@ public class Sceneloader : MonoBehaviour
             case GameLoadModo.retry:
                 SceneManager.LoadScene(scene);
                 GameManager.instance._timer = 0;
-                GameManager.instance._EnemyStop = false;
-                GameManager.instance._playerStop = false;
+                GameManager.instance.enemyStop = false;
+                GameManager.instance.playerStop = false;
                 break;
 
             case GameLoadModo.normalroad:
@@ -40,29 +49,33 @@ public class Sceneloader : MonoBehaviour
             
             case GameLoadModo.titlelRoad:
                 SceneManager.LoadScene(scene);
-                GameManager.instance._isfreelevel = false;
+                GameManager.instance.isfreelevel = false;
                 break;
             
             case GameLoadModo.Exit:
                // UnityEditor.EditorApplication.isPlaying = false;
                 Application.Quit();
                 break;
+            
             case GameLoadModo.select:
                 SceneManager.LoadScene(scene);
                 GameManager.instance._timer = 0;
-                GameManager.instance._EnemyStop = false;
-                GameManager.instance._playerStop = false;
+                GameManager.instance.enemyStop = false;
+                GameManager.instance.playerStop = false;
+                
                 switch (_stagelevel)
                 {
                     case stagelevel.Normal:
-                        GameManager.instance._stagecount = 20;
+                        GameManager.instance.stagecount = 20;
                         break;
+                  
                     case stagelevel.hard:
-                        GameManager.instance._stagecount = 40;
+                        GameManager.instance.stagecount = 40;
                         break;
+                    
                     case stagelevel.freelevel:
-                        GameManager.instance._isfreelevel = true;
-                        GameManager.instance._freelevel = int.Parse(_inpottext.text);
+                        GameManager.instance.isfreelevel = true;
+                        GameManager.instance.freelevel = int.Parse(_inpottext.text);
                         break;
                 }
                 break;
@@ -84,5 +97,4 @@ public class Sceneloader : MonoBehaviour
         hard,
         freelevel
     }
-   
 }

@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class timercontroller : MonoBehaviour
 {
     [SerializeField]
-    [Header("")]
+    [Header("スタートするまでのカウントダウン時間")]
     float _startCount = 3;
 
     [SerializeField]
-    [Header("")]
+    [Header("カウントダウンタイマーを映すText")]
     Text _startCounttext;
 
     [SerializeField]
@@ -19,7 +19,7 @@ public class timercontroller : MonoBehaviour
 
     private void Start()
     {
-        GameManager.instance._startTimer = true;
+        GameManager.instance.startTimer = true;
     }
 
     private void Update()
@@ -29,16 +29,16 @@ public class timercontroller : MonoBehaviour
     
     public void Timer()
     {
-        if (GameManager.instance._startTimer)
+        if (GameManager.instance.startTimer)
         {
             _startCount -= Time.deltaTime;
             _startCounttext.text = _startCount.ToString("F1");      
         }
         if (_startCount < 0)
         {     
-            GameManager.instance._playerStop = false;
-            GameManager.instance._EnemyStop = false;
-            GameManager.instance._startTimer = false;
+            GameManager.instance.playerStop = false;
+            GameManager.instance.enemyStop = false;
+            GameManager.instance.startTimer = false;
             _startCounttext.gameObject.SetActive(false);
             GameManager.instance._timer += Time.deltaTime;
             _gameplaytimerText.text = GameManager.instance._timer.ToString("F2");

@@ -12,8 +12,7 @@ public class EnemyController : MonoBehaviour
 
     [SerializeField]
     [Header("ˆÚ“®‘¬“x")]
-    public float _speed = 2;
-
+    float _speed = 2;
 
     Rigidbody2D _rd;
     Animator _anim;
@@ -22,7 +21,7 @@ public class EnemyController : MonoBehaviour
     {
         _rd = GetComponent<Rigidbody2D>();
         _anim = GetComponent<Animator>();
-        GameManager.instance._EnemyStop = true;
+        GameManager.instance.enemyStop = true;
     }
 
     void FixedUpdate()
@@ -34,7 +33,7 @@ public class EnemyController : MonoBehaviour
     /// </summary>
     void EnemyMove()
     {
-        if (!GameManager.instance._EnemyStop)
+        if (!GameManager.instance.enemyStop)
         {
          _rd.velocity = _dir.normalized * _speed;
         }
