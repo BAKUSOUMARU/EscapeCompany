@@ -6,8 +6,10 @@ using DG.Tweening;
 
 public class loadingText : MonoBehaviour
 {
-    [SerializeField] Text _loadingText;
-    // Update is called once per frame
+    [SerializeField] 
+    [Header("NowLoading‚ð•\Ž¦‚³‚¹‚éText")]
+    Text _loadingText;
+    
 
     private void Start()
     {

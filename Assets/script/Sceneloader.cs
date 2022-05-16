@@ -7,19 +7,24 @@ using UnityEngine.UI;
 public class Sceneloader : MonoBehaviour
 {
     [SerializeField] 
+    [Header("ロードするシーンの名前")]
     string _scene = default;
     
     [SerializeField]
+    float _roadtime;
+
+    [SerializeField]
+    [Header("ゲームのロードのやり方")]
     GameLoadModo _gameLoadModo;
     
     [SerializeField]
+    [Header("フリーレベルの入力されるText")]
     Text _inpottext;
     
     [SerializeField] 
+    [Header("遷移される先の難易度の設定")]
     stagelevel _stagelevel;
     
-    [SerializeField]
-    float _roadtime;
 
     private void Update()
     {
@@ -53,7 +58,6 @@ public class Sceneloader : MonoBehaviour
                 break;
             
             case GameLoadModo.Exit:
-               // UnityEditor.EditorApplication.isPlaying = false;
                 Application.Quit();
                 break;
             

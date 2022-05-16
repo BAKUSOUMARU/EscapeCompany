@@ -826,6 +826,7 @@ MonoBehaviour:
   - {fileID: 9157020800808190649, guid: e511700d6cde78041ba900061c49a670, type: 3}
   - {fileID: 8834180720403739215, guid: f3f5279cad3d1db4b828ffa2a3026a31, type: 3}
   - {fileID: 6601563164326251363, guid: 45208c4d1fbce78458573e7f1f7337c3, type: 3}
+  - {fileID: 9156536911920389655, guid: 20da30f1831700c40a19eb5f007de342, type: 3}
   _goalObject: {fileID: 160716810359771639, guid: aeaf2ef7a8ed46d44a9a7d867a338545, type: 3}
   _backscreen: {fileID: 4899557744273472370, guid: 43eea585b664d9647848c53fce7239ae, type: 3}
   _addBackseason: 3
