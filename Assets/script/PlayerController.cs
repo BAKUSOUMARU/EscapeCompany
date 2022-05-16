@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
 
             if (JumpKey > 0 && _isGround)
             {
-                _rd.AddForce(Vector2.up * _jump, ForceMode2D.Impulse);
+                _rd.AddForce(Vector2.up * _jump,ForceMode2D.Impulse);
                 _isGround = false;
             }
         }
