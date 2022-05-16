@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8534483335289712985}
   - component: {fileID: 8534483335289712980}
   - component: {fileID: 2965021240995429530}
+  - component: {fileID: 7462311893515570203}
   m_Layer: 0
   m_Name: player 1
   m_TagString: Player
@@ -139,3 +140,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Speed: 10
   _jump: 50
+--- !u!70 &7462311893515570203
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8534483335289712984}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.8, y: 1.3}
+  m_Direction: 0
