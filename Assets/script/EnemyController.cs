@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
-/// Enemy‚Ìscript‚Å‚·
+/// Enemy‚Ìscript
 /// </summary>
 public class EnemyController : MonoBehaviour
 {
@@ -35,7 +35,7 @@ public class EnemyController : MonoBehaviour
     {
         if (!GameManager.instance.enemyStop)
         {
-         _rd.velocity = _dir.normalized * _speed;
+            _rd.velocity = _dir.normalized * _speed;
         }
         else
         {

@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+/// <summary>
+/// ゲーム内に一つしか存在しないゲームマネージャー
+/// に関するscript
+/// </summary>
 public class GameManager : MonoBehaviour
 {
     [Header("ゲームスタートしてからの時間")]

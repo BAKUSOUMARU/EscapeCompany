@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+/// <summary>
+/// シーンロードに関するscript
+/// </summary>
 public class Sceneloader : MonoBehaviour
 {
     [SerializeField] 
@@ -25,7 +27,6 @@ public class Sceneloader : MonoBehaviour
     [Header("遷移される先の難易度の設定")]
     stagelevel _stagelevel;
     
-
     private void Update()
     {
         if (_gameLoadModo != GameLoadModo.Autoroad) return;
@@ -95,6 +96,7 @@ public class Sceneloader : MonoBehaviour
         select,
         Autoroad
     }
+    
     enum stagelevel
     {
         Normal,

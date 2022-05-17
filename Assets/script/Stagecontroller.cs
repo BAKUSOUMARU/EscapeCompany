@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// ステージの自動生成のscript
+/// </summary>
 public class Stagecontroller : MonoBehaviour
 {
     [SerializeField]

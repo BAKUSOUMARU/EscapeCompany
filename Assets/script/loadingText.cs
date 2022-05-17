@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
-
+/// <summary>
+/// ロード画面のテキストのscript
+/// </summary>
 public class loadingText : MonoBehaviour
 {
     [SerializeField] 

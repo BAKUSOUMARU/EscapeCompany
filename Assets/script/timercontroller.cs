@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+///　ゲーム開始時のカウントダウンタイマーのscript
+/// </summary>
 public class timercontroller : MonoBehaviour
 {
     [SerializeField]
