@@ -26,7 +26,8 @@ public class Sceneloader : MonoBehaviour
     [SerializeField] 
     [Header("‘JˆÚ‚³‚ê‚éæ‚Ì“ïˆÕ“x‚ÌÝ’è")]
     stagelevel _stagelevel;
-    
+
+    [SerializeField] GameObject _popup;
     private void Update()
     {
         if (_gameLoadModo != GameLoadModo.Autoroad) return;
@@ -56,6 +57,7 @@ public class Sceneloader : MonoBehaviour
             case GameLoadModo.titlelRoad:
                 SceneManager.LoadScene(scene);
                 GameManager.instance.isfreelevel = false;
+                GameManager.instance.freelevel = 0;
                 break;
             
             case GameLoadModo.Exit:
@@ -63,7 +65,6 @@ public class Sceneloader : MonoBehaviour
                 break;
             
             case GameLoadModo.select:
-                SceneManager.LoadScene(scene);
                 GameManager.instance._timer = 0;
                 GameManager.instance.enemyStop = false;
                 GameManager.instance.playerStop = false;
@@ -72,15 +73,25 @@ public class Sceneloader : MonoBehaviour
                 {
                     case stagelevel.Normal:
                         GameManager.instance.stagecount = 20;
+                        SceneManager.LoadScene(scene);
                         break;
                   
                     case stagelevel.hard:
                         GameManager.instance.stagecount = 40;
+                        SceneManager.LoadScene(scene);
                         break;
                     
                     case stagelevel.freelevel:
                         GameManager.instance.isfreelevel = true;
-                        GameManager.instance.freelevel = int.Parse(_inpottext.text);
+                        if(int.Parse(_inpottext.text) > 0)
+                        {
+                            SceneManager.LoadScene(scene);
+                            GameManager.instance.freelevel = int.Parse(_inpottext.text);
+                        }
+                        else
+                        {
+                           _popup.SetActive(true);   
+                        }
                         break;
                 }
                 break;

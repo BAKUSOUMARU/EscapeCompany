@@ -48,7 +48,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    
     /// <summary>
     /// player‚ª“®‚­ˆ—
     /// </summary>
@@ -61,7 +60,7 @@ public class PlayerController : MonoBehaviour
         {
             if (HorizontalKey > 0)
             {
-                _rd.velocity = new Vector2(HorizontalKey * _Speed, _rd.velocity.y);
+                _rd.velocity =new Vector2(HorizontalKey * _Speed, _rd.velocity.y);
                 _anim.SetBool("run", true);
                 _sp.flipX = false;
             }
@@ -79,6 +78,7 @@ public class PlayerController : MonoBehaviour
 
             if (JumpKey > 0 && _isGround)
             {
+                
                 _rd.AddForce(Vector2.up * _jump,ForceMode2D.Impulse);
                 _isGround = false;
             }
