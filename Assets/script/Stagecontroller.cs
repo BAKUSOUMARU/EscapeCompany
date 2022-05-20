@@ -61,7 +61,7 @@ public class Stagecontroller : MonoBehaviour
     /// </summary>
     public void BackScreenSpawn()
     {
-        if (GameManager.instance.stagecount / 5 > 0)
+        if (GameManager.instance.stagecount > 4)
         {
             _addBackseason += GameManager.instance.stagecount / 4;
         }

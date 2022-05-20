@@ -13,6 +13,7 @@ public class Sceneloader : MonoBehaviour
     string _scene = default;
     
     [SerializeField]
+    [Header("自動ロード時のロードする時間")]
     float _roadtime;
 
     [SerializeField]
@@ -82,11 +83,11 @@ public class Sceneloader : MonoBehaviour
                         break;
                     
                     case stagelevel.freelevel:
-                        GameManager.instance.isfreelevel = true;
                         if(int.Parse(_inpottext.text) > 0)
                         {
                             SceneManager.LoadScene(scene);
                             GameManager.instance.freelevel = int.Parse(_inpottext.text);
+                            GameManager.instance.isfreelevel = true;
                         }
                         else
                         {
