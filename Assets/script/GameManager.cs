@@ -25,13 +25,20 @@ public class GameManager : MonoBehaviour
     public int stagecount;
 
     [Header("フリーレベルのステージを出す数")]
-    public int  freelevel;
+    public int freelevel;
 
     [Header("タイマーをスタートさせるフラグ")]
     public bool startTimer = false;
 
+    public int money = 0;
+
     public static GameManager instance;
-   
+
+    public int skinnumber = 0;
+
+    [SerializeField] Sprite[] _playersprite;
+
+    public Sprite[] PlayerSprites => _playersprite; 
     /// <summary>
     ///ゲームマネージャーをscene内に一つだけ存在するようにする処理
     ///とDontDestroyOnLoadを呼ぶ処理
@@ -61,7 +68,8 @@ public class GameManager : MonoBehaviour
     /// ゲームクリアの処理
     /// </summary>
     public void GameClear()
-    {   
+    {
+        money += stagecount; 
         playerStop = true;
         SceneManager.LoadScene("GameClear");
     }

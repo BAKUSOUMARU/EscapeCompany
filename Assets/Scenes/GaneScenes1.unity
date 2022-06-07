@@ -560,6 +560,10 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 8534483335289712982, guid: 1013f2dba5a104143a2bf6848bc5bb45, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2023923573111878767, guid: 169afa027bec2414fb4921ed77e575b0, type: 3}
     - target: {fileID: 8534483335289712983, guid: 1013f2dba5a104143a2bf6848bc5bb45, type: 3}
       propertyPath: m_RootOrder
       value: 7

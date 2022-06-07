@@ -10,6 +10,8 @@ public class Stagecontroller : MonoBehaviour
     [Header("生成するステージのprefab")]
     GameObject[] _stage;
 
+    GameObject[] _player;
+        
     [SerializeField]
     [Header("ゴールステージのprefab")]
     GameObject _goalObject;
