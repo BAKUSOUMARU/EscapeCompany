@@ -10,6 +10,8 @@ public class Stagecontroller : MonoBehaviour
     [Header("生成するステージのprefab")]
     GameObject[] _stage;
 
+    GameObject[] _player;
+        
     [SerializeField]
     [Header("ゴールステージのprefab")]
     GameObject _goalObject;
@@ -31,6 +33,8 @@ public class Stagecontroller : MonoBehaviour
 
     private void Start()
     {
+        Instantiate(GameManager.instance.Playes[GameManager.instance.Playerskinnumber], new Vector2(-15f, -3.3f), transform.rotation);
+        Instantiate(GameManager.instance.Enemy[GameManager.instance.Enemyskinnumder], new Vector2(-25f, -3.4f), transform.rotation);
         if (GameManager.instance.isfreelevel)
         {
             GameManager.instance.stagecount = GameManager.instance.freelevel;
