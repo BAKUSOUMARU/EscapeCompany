@@ -26,8 +26,6 @@ public class PlayerController : MonoBehaviour
         _anim = GetComponent<Animator>();
         _sp = GetComponent<SpriteRenderer>();
         GameManager.instance.playerStop = true;
-        _sp.sprite = GameManager.instance.PlayerSprites[GameManager.instance.skinnumber];
-        _anim.SetInteger("skinnumber", GameManager.instance.skinnumber);
     }
 
     // Update is called once per frame

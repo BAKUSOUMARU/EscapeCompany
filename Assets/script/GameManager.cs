@@ -34,11 +34,15 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
 
-    public int skinnumber = 0;
+    public int Playerskinnumber = 0;
 
-    [SerializeField] Sprite[] _playersprite;
+    public int Enemyskinnumder = 0;
+    [SerializeField] GameObject[] _player;
 
-    public Sprite[] PlayerSprites => _playersprite; 
+    [SerializeField] GameObject[] _Enemy;
+
+    public GameObject[] Playes => _player;
+    public GameObject[] Enemy => _Enemy;
     /// <summary>
     ///ゲームマネージャーをscene内に一つだけ存在するようにする処理
     ///とDontDestroyOnLoadを呼ぶ処理
