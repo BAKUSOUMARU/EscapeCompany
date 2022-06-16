@@ -15,14 +15,14 @@ public class ShopController : MonoBehaviour
         switch (shopCatalog)
         {
             case ShopCatalog.Player1:
-                if (GameManager.instance.money > 199)
+                if(GameManager.instance.Playerskinnumber == _skinnumberchuck)
+                {
+                    _popUp2.SetActive(true);
+                }
+                else if (GameManager.instance.money > 199)
                 {
                     GameManager.instance.money -= 200;
                     GameManager.instance.Playerskinnumber = 0;
-                }
-                else if(GameManager.instance.Playerskinnumber == _skinnumberchuck)
-                {
-                    _popUp2.SetActive(true);
                 }
                 else
                 {
@@ -30,15 +30,15 @@ public class ShopController : MonoBehaviour
                 }
                 break;
             case ShopCatalog.Player2:
-                if (GameManager.instance.money > 199)
+                if (GameManager.instance.Playerskinnumber == _skinnumberchuck)
+                {
+                    _popUp2.SetActive(true);
+                }
+                else if (GameManager.instance.money > 199)
                 {
                     GameManager.instance.money -= 200;
                     GameManager.instance.Playerskinnumber = 1;
 
-                }
-                else if (GameManager.instance.Playerskinnumber == _skinnumberchuck)
-                {
-                    _popUp2.SetActive(true);
                 }
                 else
                 {
@@ -46,15 +46,15 @@ public class ShopController : MonoBehaviour
                 }
                 break;
             case ShopCatalog.Player3:
-                if (GameManager.instance.money > 199)
+                if (GameManager.instance.Playerskinnumber == _skinnumberchuck)
+                {
+                    _popUp2.SetActive(true);
+                }
+                else if (GameManager.instance.money > 199)
                 {
                     GameManager.instance.money -= 200;
                     GameManager.instance.Playerskinnumber = 2;
 
-                }
-                else if (GameManager.instance.Playerskinnumber == _skinnumberchuck)
-                {
-                    _popUp2.SetActive(true);
                 }
                 else
                 {
@@ -78,15 +78,15 @@ public class ShopController : MonoBehaviour
                 }
                 break;
             case ShopCatalog.Player5:
-                if (GameManager.instance.money > 199)
+                if (GameManager.instance.Playerskinnumber == _skinnumberchuck)
+                {
+                    _popUp2.SetActive(true);
+                }
+                else if (GameManager.instance.money > 199)
                 {
                     GameManager.instance.money -= 200;
                     GameManager.instance.Playerskinnumber = 4;
 
-                }
-                else if (GameManager.instance.Playerskinnumber == _skinnumberchuck)
-                {
-                    _popUp2.SetActive(true);
                 }
                 else
                 {
@@ -94,15 +94,15 @@ public class ShopController : MonoBehaviour
                 }
                 break;
             case ShopCatalog.Player6:
-                if (GameManager.instance.money > 199)
+                if (GameManager.instance.Playerskinnumber == _skinnumberchuck)
+                {
+                    _popUp2.SetActive(true);
+                }
+                else if (GameManager.instance.money > 199)
                 {
                     GameManager.instance.money -= 200;
                     GameManager.instance.Playerskinnumber = 5;
 
-                }
-                else if (GameManager.instance.Playerskinnumber == _skinnumberchuck)
-                {
-                    _popUp2.SetActive(true);
                 }
                 else
                 {
@@ -111,15 +111,15 @@ public class ShopController : MonoBehaviour
 
                 break;
             case ShopCatalog.Player7:
-                if (GameManager.instance.money > 499)
+                if (GameManager.instance.Playerskinnumber == _skinnumberchuck)
+                {
+                    _popUp2.SetActive(true);
+                }
+                else if (GameManager.instance.money > 499)
                 {
                     GameManager.instance.money -= 500;
                     GameManager.instance.Playerskinnumber = 6;
 
-                }
-                else if (GameManager.instance.Playerskinnumber == _skinnumberchuck)
-                {
-                    _popUp2.SetActive(true);
                 }
                 else
                 {
@@ -127,15 +127,15 @@ public class ShopController : MonoBehaviour
                 }
                 break;
             case ShopCatalog.Enemy1:
-                if (GameManager.instance.money > 299)
+                if (GameManager.instance.Playerskinnumber == _skinnumberchuck)
+                {
+                    _popUp2.SetActive(true);
+                }
+                else if (GameManager.instance.money > 299)
                 {
                     GameManager.instance.money -= 300;
                     GameManager.instance.Enemyskinnumder = 0;
 
-                }
-                else if (GameManager.instance.Playerskinnumber == _skinnumberchuck)
-                {
-                    _popUp2.SetActive(true);
                 }
                 else
                 {
@@ -143,15 +143,15 @@ public class ShopController : MonoBehaviour
                 }
                 break;
             case ShopCatalog.Enemy2:
-                if (GameManager.instance.money > 299)
-                {
-                    GameManager.instance.money -= 300;
-                    GameManager.instance.Enemyskinnumder = 0;
-
-                }
-                else if (GameManager.instance.Playerskinnumber == _skinnumberchuck)
+                if (GameManager.instance.Playerskinnumber == _skinnumberchuck)
                 {
                     _popUp2.SetActive(true);
+                }
+                else if (GameManager.instance.money > 299)
+                {
+                    GameManager.instance.money -= 300;
+                    GameManager.instance.Enemyskinnumder = 1;
+
                 }
                 else
                 {
@@ -159,14 +159,14 @@ public class ShopController : MonoBehaviour
                 }
                 break;
             case ShopCatalog.Enemy3:
-                if (GameManager.instance.money > 299)
-                {
-                    GameManager.instance.money -= 300;
-                    GameManager.instance.Enemyskinnumder = 0;
-                }
-                else if (GameManager.instance.Playerskinnumber == _skinnumberchuck)
+                if (GameManager.instance.Playerskinnumber == _skinnumberchuck)
                 {
                     _popUp2.SetActive(true);
+                }
+                else if (GameManager.instance.money > 299)
+                {
+                    GameManager.instance.money -= 300;
+                    GameManager.instance.Enemyskinnumder = 2;
                 }
                 else
                 {
