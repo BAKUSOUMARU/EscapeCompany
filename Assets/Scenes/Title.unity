@@ -176,10 +176,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scene: 
-  _gameLoadModo: 3
-  _inpottext: {fileID: 0}
-  _stagelevel: 0
+  _scene: 
   _roadtime: 0
+  _gameLoadModo: 3
+  _inpotText: {fileID: 0}
+  _stagelevel: 0
+  _popup: {fileID: 0}
 --- !u!114 &110748215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -666,10 +668,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scene: StageSelect
-  _gameLoadModo: 1
-  _inpottext: {fileID: 0}
-  _stagelevel: 0
+  _scene: StageSelect
   _roadtime: 0
+  _gameLoadModo: 1
+  _inpotText: {fileID: 0}
+  _stagelevel: 0
+  _popup: {fileID: 0}
 --- !u!114 &723619161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -715,9 +719,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 723619160}
-        m_TargetAssemblyTypeName: Sceneloader, Assembly-CSharp
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: Sceneroad
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -923,6 +927,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1436993965}
   - component: {fileID: 1436993964}
+  - component: {fileID: 1436993966}
   m_Layer: 0
   m_Name: title
   m_TagString: Untagged
@@ -995,6 +1000,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1436993966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436993963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d7804ce16967846a901549efd26242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scene: 
 --- !u!1 &2051342858
 GameObject:
   m_ObjectHideFlags: 0

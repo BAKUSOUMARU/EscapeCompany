@@ -14,6 +14,9 @@ public class EnemyController : MonoBehaviour
     [Header("ˆÚ“®‘¬“x")]
     float _speed = 2;
 
+    [SerializeField]
+    bool _enemyStop = false;
+
     Rigidbody2D _rd;
     Animator _anim;
    
@@ -28,6 +31,13 @@ public class EnemyController : MonoBehaviour
     {
         EnemyMove();
     }
+
+    public void EnemyStart()
+    {
+        _enemyStop = true;
+    }
+
+
     /// <summary>
     /// Enemy‚Ì“®‚«‚Ìˆ—
     /// </summary>
@@ -46,11 +56,11 @@ public class EnemyController : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Object")
+        if (collision.gameObject.CompareTag("Object"))
         {
             Destroy(collision.gameObject);
         }
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(collision.gameObject);
             GameManager.instance.GameOver(); 

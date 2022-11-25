@@ -77,4 +77,11 @@ public class GameManager : MonoBehaviour
         playerStop = true;
         SceneManager.LoadScene("GameClear");
     }
+
+    public void GameReset()
+    {
+       _timer = 0;
+       enemyStop = false;
+       playerStop = false;
+    }
 }

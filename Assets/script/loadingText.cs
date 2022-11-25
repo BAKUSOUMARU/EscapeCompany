@@ -6,7 +6,7 @@ using DG.Tweening;
 /// <summary>
 /// ロード画面のテキストのscript
 /// </summary>
-public class loadingText : MonoBehaviour
+public class LoadingText : MonoBehaviour
 {
     [SerializeField] 
     [Header("NowLoadingを表示させるText")]

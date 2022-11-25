@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 /// <summary>
 /// シーンロードに関するscript
 /// </summary>
-public class Sceneloader : MonoBehaviour
+public class SceneLoader : SceneLoad
 {
     [SerializeField] 
     [Header("ロードするシーンの名前")]
@@ -22,11 +21,11 @@ public class Sceneloader : MonoBehaviour
     
     [SerializeField]
     [Header("フリーレベルの入力されるText")]
-    Text _inpottext;
+    Text _inpotText;
     
     [SerializeField] 
     [Header("遷移される先の難易度の設定")]
-    stagelevel _stagelevel;
+    StageLevel _stagelevel;
 
     [SerializeField] GameObject _popup;
     private void Update()
@@ -35,28 +34,16 @@ public class Sceneloader : MonoBehaviour
         _roadtime -= Time.deltaTime;
         if (_roadtime < 0 )
         {
-            SceneManager.LoadScene(_scene);
+            LoadScene();
         }
     }
 
-    public void Sceneroad(string scene)
+    public void Sceneroad()
     {
         switch (_gameLoadModo)
-        {
-            
-            case GameLoadModo.retry:
-                SceneManager.LoadScene(scene);
-                GameManager.instance._timer = 0;
-                GameManager.instance.enemyStop = false;
-                GameManager.instance.playerStop = false;
-                break;
-
-            case GameLoadModo.normalroad:
-                SceneManager.LoadScene(scene);
-                break;
-            
+        {   
             case GameLoadModo.titlelRoad:
-                SceneManager.LoadScene(scene);
+              //  SceneManager.LoadScene(_scene);
                 GameManager.instance.isfreelevel = false;
                 GameManager.instance.freelevel = 0;
                 break;
@@ -66,27 +53,24 @@ public class Sceneloader : MonoBehaviour
                 break;
             
             case GameLoadModo.select:
-                GameManager.instance._timer = 0;
-                GameManager.instance.enemyStop = false;
-                GameManager.instance.playerStop = false;
-                
+                GameManager.instance.GameReset();
                 switch (_stagelevel)
                 {
-                    case stagelevel.Normal:
+                    case StageLevel.Normal:
                         GameManager.instance.stagecount = 20;
-                        SceneManager.LoadScene(scene);
+                      //  SceneManager.LoadScene(_scene);
                         break;
                   
-                    case stagelevel.hard:
+                    case StageLevel.hard:
                         GameManager.instance.stagecount = 40;
-                        SceneManager.LoadScene(scene);
+                      //  SceneManager.LoadScene(_scene);
                         break;
                     
-                    case stagelevel.freelevel:
-                        if(int.Parse(_inpottext.text) > 0)
+                    case StageLevel.freelevel:
+                        if(int.Parse(_inpotText.text) > 0)
                         {
-                            SceneManager.LoadScene(scene);
-                            GameManager.instance.freelevel = int.Parse(_inpottext.text);
+                        //    SceneManager.LoadScene(_scene);
+                            GameManager.instance.freelevel = int.Parse(_inpotText.text);
                             GameManager.instance.isfreelevel = true;
                         }
                         else
@@ -109,7 +93,7 @@ public class Sceneloader : MonoBehaviour
         Autoroad
     }
     
-    enum stagelevel
+    enum StageLevel
     {
         Normal,
         hard,
