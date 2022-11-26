@@ -262,8 +262,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startCount: 3
-  _startCounttext: {fileID: 620091244}
-  _gameplaytimerText: {fileID: 2035288575}
+  _startCountText: {fileID: 620091244}
+  _gamePlayTimerText: {fileID: 2035288575}
 --- !u!4 &326290566
 Transform:
   m_ObjectHideFlags: 0

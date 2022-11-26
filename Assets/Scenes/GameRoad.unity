@@ -231,15 +231,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 170187791}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d930e65b70e74ba4fad1ee2a4bdd3f73, type: 3}
+  m_Script: {fileID: 11500000, guid: 56daa1a6bc61fe94e98054231a615b60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _scene: Title
-  _roadtime: 10
-  _gameLoadModo: 5
-  _inpottext: {fileID: 0}
-  _stagelevel: 0
-  _popup: {fileID: 0}
+  _delayTime: 5000
 --- !u!4 &170187793
 Transform:
   m_ObjectHideFlags: 0
@@ -283,7 +279,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db6f5cadb609f444a8c549e53a196ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _loadingText: {fileID: 1704554690}
 --- !u!4 &314653502
 Transform:
   m_ObjectHideFlags: 0
