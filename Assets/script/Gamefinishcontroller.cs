@@ -33,8 +33,8 @@ public class Gamefinishcontroller : MonoBehaviour
                 _timertext.text = "Ÿ‚Í‘ŞE‚·‚é‚ñ‚¾II";
                 break;
             case Gamefinishmode.GameClear:
-                _moneytext.text = "Š‹à" + GameManager.instance.money + "‰~";
-                _timertext.text = "‘ŞE‚Ü‚Å‚ÌŠÔ"@+@GameManager.instance._timer.ToString("F2") + "•b";
+                _moneytext.text = "Š‹à" + GameManager.instance.Money + "‰~";
+                _timertext.text = "‘ŞE‚Ü‚Å‚ÌŠÔ"@+@GameManager.instance.Timer.ToString("F2") + "•b";
                 break;
             default:
                 break;

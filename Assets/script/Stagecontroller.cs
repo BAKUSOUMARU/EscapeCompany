@@ -33,11 +33,11 @@ public class Stagecontroller : MonoBehaviour
 
     private void Start()
     {
-        Instantiate(GameManager.instance.Playes[GameManager.instance.Playerskinnumber], new Vector2(-15f, -3.3f), transform.rotation);
-        Instantiate(GameManager.instance.Enemy[GameManager.instance.Enemyskinnumder], new Vector2(-25f, -3.4f), transform.rotation);
-        if (GameManager.instance.isfreelevel)
+        Instantiate(GameManager.instance.Playes[GameManager.instance.PlayerSkinNumber], new Vector2(-15f, -3.3f), transform.rotation);
+        Instantiate(GameManager.instance.Enemy[GameManager.instance.EnemySkinNumder], new Vector2(-25f, -3.4f), transform.rotation);
+        if (GameManager.instance.IsFreeLevel)
         {
-            GameManager.instance.stagecount = GameManager.instance.freelevel;
+            GameManager.instance.StageCountSet(GameManager.instance.FreeLevel);
         }
         BackScreenSpawn();
         StageSpawn();
@@ -49,7 +49,7 @@ public class Stagecontroller : MonoBehaviour
     public void StageSpawn()
     {
         _stageSpawninterval = 0;
-        for (int i = 0; i < GameManager.instance.stagecount; i++)
+        for (int i = 0; i < GameManager.instance.StageCount; i++)
         {
             int randomIndex = Random.Range(0, _stage.Length);
             Instantiate(_stage[randomIndex], new Vector2(_stageSpawninterval, 0), transform.rotation);
@@ -65,14 +65,14 @@ public class Stagecontroller : MonoBehaviour
     /// </summary>
     public void BackScreenSpawn()
     {
-        if (GameManager.instance.stagecount > 4)
+        if (GameManager.instance.StageCount > 4)
         {
-            _addBackseason += GameManager.instance.stagecount / 4;
+            _addBackseason += GameManager.instance.StageCount / 4;
         }
         Debug.Log("èoÇΩÇÊ");
         _backScreenSpawnimterval = (float)-14.5;
         
-        for (int i = 0; i < GameManager.instance.stagecount + _addBackseason; i++)
+        for (int i = 0; i < GameManager.instance.StageCount + _addBackseason; i++)
         {
             Instantiate(_backscreen, new Vector3(_backScreenSpawnimterval, 0f, 10f), transform.rotation);
             _backScreenSpawnimterval += (float)14.5;

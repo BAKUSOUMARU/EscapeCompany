@@ -6546,9 +6546,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1986031945}
-        m_TargetAssemblyTypeName: Sceneloader, Assembly-CSharp
-        m_MethodName: Sceneroad
-        m_Mode: 5
+        m_TargetAssemblyTypeName: SceneLoad, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6604,15 +6604,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1986031940}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d930e65b70e74ba4fad1ee2a4bdd3f73, type: 3}
+  m_Script: {fileID: 11500000, guid: e8d7804ce16967846a901549efd26242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _scene: StageSelect
-  _roadtime: 0
-  _gameLoadModo: 1
-  _inpottext: {fileID: 0}
-  _stagelevel: 0
-  _popup: {fileID: 0}
 --- !u!1 &2002824913
 GameObject:
   m_ObjectHideFlags: 0
@@ -7222,7 +7217,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -30, y: -30}
   m_SizeDelta: {x: 600, y: 229.58}
   m_Pivot: {x: 1, y: 1}
 --- !u!1 &2086658067

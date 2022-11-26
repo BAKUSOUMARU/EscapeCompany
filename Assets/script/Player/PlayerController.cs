@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
         _rd = GetComponent<Rigidbody2D>();
         _anim = GetComponent<Animator>();
         _sp = GetComponent<SpriteRenderer>();
-        GameManager.instance.playerStop = true;
+        GameManager.instance.StopPlayer();
     }
 
     // Update is called once per frame
@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Goal")
         {
             GameManager.instance.GameClear();
-            GameManager.instance.enemyStop = true;
+            GameManager.instance.StopEnemy();
         }
 
     }
@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
         float HorizontalKey = Input.GetAxis("Horizontal");
         float JumpKey = Input.GetAxis("Jump");
         Debug.Log(_isGround);
-        if (!GameManager.instance.playerStop)
+        if (!GameManager.instance.IsPlayerStop)
         {
             if (HorizontalKey > 0)
             {

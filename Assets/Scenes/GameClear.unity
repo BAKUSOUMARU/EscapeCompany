@@ -1245,7 +1245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632378d6e4544a44397591cf9a026330, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timertext: {fileID: 0}
+  _timertext: {fileID: 1780791281}
   _moneytext: {fileID: 251880306}
   gamefinishmode: 1
 --- !u!4 &1622550882

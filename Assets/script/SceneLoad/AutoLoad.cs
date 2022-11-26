@@ -12,9 +12,9 @@ public class AutoLoad : SceneLoad
     int _delayTime = 5000;
 
     private CancellationTokenSource _cts = new CancellationTokenSource();
-    void Start()
+    async void Start()
     {
-        StartLoad(_cts.Token);
+        await StartLoad(_cts.Token);
     }
 
     void Update()
