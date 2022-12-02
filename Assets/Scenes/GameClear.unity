@@ -1247,7 +1247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _timertext: {fileID: 1780791281}
   _moneytext: {fileID: 251880306}
-  gamefinishmode: 1
+  _gamefinishmode: 1
 --- !u!4 &1622550882
 Transform:
   m_ObjectHideFlags: 0

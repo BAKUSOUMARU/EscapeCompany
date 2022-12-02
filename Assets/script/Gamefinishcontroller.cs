@@ -6,7 +6,7 @@ using UnityEngine.UI;
 /// <summary>
 /// ゲーム終了時の処理
 /// </summary>
-public class Gamefinishcontroller : MonoBehaviour
+public class GameFinishController : MonoBehaviour
 {
 
     [SerializeField]
@@ -18,7 +18,7 @@ public class Gamefinishcontroller : MonoBehaviour
 
     [SerializeField]
     [Header("ゲーム終了時後の処理の変更")]
-    Gamefinishmode gamefinishmode;
+    Gamefinishmode _gamefinishmode;
     
     void Start()
     {
@@ -27,7 +27,7 @@ public class Gamefinishcontroller : MonoBehaviour
 
     public void GameFinish()
     {
-        switch (gamefinishmode)
+        switch (_gamefinishmode)
         {
             case Gamefinishmode.GameOver:
                 _timertext.text = "次は退職するんだ！！";

@@ -4,7 +4,7 @@ using UnityEngine;
 /// <summary>
 /// ステージの自動生成のscript
 /// </summary>
-public class Stagecontroller : MonoBehaviour
+public class StageController : MonoBehaviour
 {
     [SerializeField]
     [Header("生成するステージのprefab")]

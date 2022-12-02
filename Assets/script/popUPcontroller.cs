@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class popUPcontroller : MonoBehaviour
+public class PopUpControllers : MonoBehaviour
 {
     [Header("0以下の数が入力された時に出すポップアップ")]
     public GameObject _popup;

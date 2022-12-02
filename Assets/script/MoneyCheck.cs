@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Moneychuck : MonoBehaviour
+public class MoneyCheck : MonoBehaviour
 {
     [SerializeField] Text _text;
     // Start is called before the first frame update
