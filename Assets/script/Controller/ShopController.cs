@@ -4,190 +4,82 @@ using UnityEngine;
 
 public class ShopController : MonoBehaviour
 {
-    [SerializeField] ShopCatalog shopCatalog;
-    [SerializeField] int _skinnumberchuck;
-    [SerializeField] GameObject _popUp;
+    [SerializeField] 
+    ShopCatalog _shopCatalog;
     
-    [SerializeField] GameObject _popUp2;
+    [SerializeField] 
+    int _SkinNumberCheck;
+
+    [SerializeField]
+    int _price = 200;
+
+    [SerializeField] 
+    GameObject _popUp;
+    
+    [SerializeField] 
+    GameObject _popUp2;
 
     public void ShopSell()
     {
-        switch (shopCatalog)
+        switch (_shopCatalog)
         {
-            case ShopCatalog.Player1:
-                if(SkinManager.Instance.NowPlayerSkinNumber == _skinnumberchuck)
-                {
-                    _popUp2.SetActive(true);
-                }
-                else if (MoneyManager.Instance.Money > 199)
-                {
-                    MoneyManager.Instance.MoneyDown(200);
-                    SkinManager.Instance.PlayerSkinNumberSet(0);
-                }
-                else
-                {
-                    _popUp.SetActive(true);
-                }
+            case ShopCatalog.Player:
+                PlayerSkinBuy(_price);
                 break;
-            case ShopCatalog.Player2:
-                if (SkinManager.Instance.NowPlayerSkinNumber == _skinnumberchuck)
-                {
-                    _popUp2.SetActive(true);
-                }
-                else if (MoneyManager.Instance.Money > 199)
-                {
-                    MoneyManager.Instance.MoneyDown(200);
-                    SkinManager.Instance.PlayerSkinNumberSet(1);
+            case ShopCatalog.Enemy:
+                EnemySkinBuy(_price);
+                break;
+        }
+    }
 
-                }
-                else
-                {
-                    _popUp.SetActive(true);
-                }
-                break;
-            case ShopCatalog.Player3:
-                if (SkinManager.Instance.NowPlayerSkinNumber == _skinnumberchuck)
-                {
-                    _popUp2.SetActive(true);
-                }
-                else if (MoneyManager.Instance.Money > 199)
-                {
-                    MoneyManager.Instance.MoneyDown(200);
-                    SkinManager.Instance.PlayerSkinNumberSet(2);
+    void PlayerSkinBuy(int price)
+    {
+        if (SkinManager.Instance.NowPlayerSkinNumber == _SkinNumberCheck)
+        {
+            _popUp2.SetActive(true);
+        }
+        else if (SkinManager.Instance.PlayerSkinList[_SkinNumberCheck].IsSkinBuy)
+        {
+            SkinManager.Instance.PlayerSkinNumberSet(_SkinNumberCheck);
+        }
+        else if (MoneyManager.Instance.Money > price--)
+        {
+            MoneyManager.Instance.MoneyDown(price);
+            SkinManager.Instance.PlayerSkinNumberSet(_SkinNumberCheck);
+            SkinManager.Instance.PlayerSkinList[_SkinNumberCheck].BuySkin();
+        }
+        else
+        {
+            _popUp.SetActive(true);
+        }
+    }
 
-                }
-                else
-                {
-                    _popUp.SetActive(true);
-                }
-                break;
-            case ShopCatalog.Player4:
-                if (SkinManager.Instance.NowPlayerSkinNumber == _skinnumberchuck)
-                {
-                    _popUp2.SetActive(true);
-                }
-                else if (MoneyManager.Instance.Money > 199)
-                {
-                    MoneyManager.Instance.MoneyDown(200);
-                    SkinManager.Instance.PlayerSkinNumberSet(3);
-
-                }
-                else
-                {
-                    _popUp.SetActive(true);
-                }
-                break;
-            case ShopCatalog.Player5:
-                if (SkinManager.Instance.NowPlayerSkinNumber == _skinnumberchuck)
-                {
-                    _popUp2.SetActive(true);
-                }
-                else if (MoneyManager.Instance.Money > 199)
-                {
-                    MoneyManager.Instance.MoneyDown(200);
-                    SkinManager.Instance.PlayerSkinNumberSet(4);
-
-                }
-                else
-                {
-                    _popUp.SetActive(true);
-                }
-                break;
-            case ShopCatalog.Player6:
-                if (SkinManager.Instance.NowPlayerSkinNumber == _skinnumberchuck)
-                {
-                    _popUp2.SetActive(true);
-                }
-                else if (MoneyManager.Instance.Money > 199)
-                {
-                    MoneyManager.Instance.MoneyDown(200);
-                    SkinManager.Instance.PlayerSkinNumberSet(5);
-
-                }
-                else
-                {
-                    _popUp.SetActive(true);
-                }
-
-                break;
-            case ShopCatalog.Player7:
-                if (SkinManager.Instance.NowPlayerSkinNumber == _skinnumberchuck)
-                {
-                    _popUp2.SetActive(true);
-                }
-                else if (MoneyManager.Instance.Money > 499)
-                {
-                    MoneyManager.Instance.MoneyDown(500);
-                    SkinManager.Instance.PlayerSkinNumberSet(6);
-
-                }
-                else
-                {
-                    _popUp.SetActive(true);
-                }
-                break;
-            case ShopCatalog.Enemy1:
-                if (SkinManager.Instance.NowEnemySkinNumber == _skinnumberchuck)
-                {
-                    _popUp2.SetActive(true);
-                }
-                else if (MoneyManager.Instance.Money > 299)
-                {
-                    MoneyManager.Instance.MoneyDown(300);
-                    SkinManager.Instance.EnemySkinNumberSet(0);
-
-                }
-                else
-                {
-                    _popUp.SetActive(true);
-                }
-                break;
-            case ShopCatalog.Enemy2:
-                if (SkinManager.Instance.NowEnemySkinNumber == _skinnumberchuck)
-                {
-                    _popUp2.SetActive(true);
-                }
-                else if (MoneyManager.Instance.Money > 299)
-                {
-                    MoneyManager.Instance.MoneyDown(300);
-                    SkinManager.Instance.EnemySkinNumberSet(1);
-
-                }
-                else
-                {
-                    _popUp.SetActive(true);
-                }
-                break;
-            case ShopCatalog.Enemy3:
-                if (SkinManager.Instance.NowEnemySkinNumber == _skinnumberchuck)
-                {
-                    _popUp2.SetActive(true);
-                }
-                else if (MoneyManager.Instance.Money > 299)
-                {
-                    MoneyManager.Instance.MoneyDown(300);
-                    SkinManager.Instance.EnemySkinNumberSet(2);
-                }
-                else
-                {
-                    _popUp.SetActive(true);
-                }
-                break;
+    void EnemySkinBuy(int price)
+    {
+        if (SkinManager.Instance.NowEnemySkinNumber == _SkinNumberCheck)
+        {
+            _popUp2.SetActive(true);
+        }
+        else if (SkinManager.Instance.EnemySkinList[_SkinNumberCheck].IsSkinBuy)
+        {
+            SkinManager.Instance.EnemySkinNumberSet(_SkinNumberCheck);
+        }
+        else if (MoneyManager.Instance.Money > price--)
+        {
+            MoneyManager.Instance.MoneyDown(price);
+            SkinManager.Instance.EnemySkinNumberSet(_SkinNumberCheck);
+            SkinManager.Instance.EnemySkinList[_SkinNumberCheck].BuySkin();
+        }
+        else
+        {
+            _popUp.SetActive(true);
         }
     }
 
     enum ShopCatalog
     {
-        Player1,
-        Player2,
-        Player3,
-        Player4,
-        Player5,
-        Player6,
-        Player7,
-        Enemy1,
-        Enemy2,
-        Enemy3,
+        Player,
+        Enemy
     }
     
 }

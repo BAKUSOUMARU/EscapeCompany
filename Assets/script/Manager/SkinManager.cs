@@ -37,6 +37,7 @@ public class PlayerSkin
     [SerializeField]
     GameObject _player;
 
+    [SerializeField]
     bool isSkinBuy = false;
 
     public void BuySkin()
@@ -54,6 +55,7 @@ public class EnemySkin
     [SerializeField]
     GameObject _enemy;
 
+    [SerializeField]
     bool isSkinBuy = false;
 
     public void BuySkin()

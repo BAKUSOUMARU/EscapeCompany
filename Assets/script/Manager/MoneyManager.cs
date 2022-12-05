@@ -17,6 +17,6 @@ public class MoneyManager:SingletonMonoBehaviour<MoneyManager>
 
      public void MoneyDown(int downMoney)
     {
-        _money -= downMoney;
+        _money -= downMoney+1;
     }
 }

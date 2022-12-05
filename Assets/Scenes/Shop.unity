@@ -483,8 +483,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b2419cf4cbe93d41aeec830fdbd5ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopCatalog: 1
-  _skinnumberchuck: 1
+  _shopCatalog: 0
+  _SkinNumberCheck: 1
+  _price: 200
   _popUp: {fileID: 1873849985}
   _popUp2: {fileID: 482421283}
 --- !u!114 &106876778
@@ -1166,8 +1167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b2419cf4cbe93d41aeec830fdbd5ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopCatalog: 4
-  _skinnumberchuck: 4
+  _shopCatalog: 0
+  _SkinNumberCheck: 4
+  _price: 200
   _popUp: {fileID: 1873849985}
   _popUp2: {fileID: 482421283}
 --- !u!114 &168552448
@@ -1597,8 +1599,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b2419cf4cbe93d41aeec830fdbd5ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopCatalog: 2
-  _skinnumberchuck: 2
+  _shopCatalog: 0
+  _SkinNumberCheck: 2
+  _price: 200
   _popUp: {fileID: 1873849985}
   _popUp2: {fileID: 482421283}
 --- !u!114 &311732891
@@ -1822,8 +1825,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b2419cf4cbe93d41aeec830fdbd5ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopCatalog: 7
-  _skinnumberchuck: 0
+  _shopCatalog: 1
+  _SkinNumberCheck: 0
+  _price: 300
   _popUp: {fileID: 1873849985}
   _popUp2: {fileID: 482421283}
 --- !u!114 &396193464
@@ -2303,8 +2307,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b2419cf4cbe93d41aeec830fdbd5ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopCatalog: 8
-  _skinnumberchuck: 1
+  _shopCatalog: 1
+  _SkinNumberCheck: 1
+  _price: 300
   _popUp: {fileID: 1873849985}
   _popUp2: {fileID: 482421283}
 --- !u!114 &674553514
@@ -2576,8 +2581,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b2419cf4cbe93d41aeec830fdbd5ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopCatalog: 0
-  _skinnumberchuck: 0
+  _shopCatalog: 0
+  _SkinNumberCheck: 0
+  _price: 200
   _popUp: {fileID: 1873849985}
   _popUp2: {fileID: 482421283}
 --- !u!114 &744016931
@@ -3586,8 +3592,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b2419cf4cbe93d41aeec830fdbd5ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopCatalog: 3
-  _skinnumberchuck: 3
+  _shopCatalog: 0
+  _SkinNumberCheck: 3
+  _price: 200
   _popUp: {fileID: 1873849985}
   _popUp2: {fileID: 482421283}
 --- !u!114 &1027071416
@@ -3949,8 +3956,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b2419cf4cbe93d41aeec830fdbd5ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopCatalog: 6
-  _skinnumberchuck: 6
+  _shopCatalog: 0
+  _SkinNumberCheck: 6
+  _price: 500
   _popUp: {fileID: 1873849985}
   _popUp2: {fileID: 482421283}
 --- !u!114 &1136410509
@@ -6704,8 +6712,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b2419cf4cbe93d41aeec830fdbd5ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopCatalog: 9
-  _skinnumberchuck: 2
+  _shopCatalog: 1
+  _SkinNumberCheck: 2
+  _price: 300
   _popUp: {fileID: 1873849985}
   _popUp2: {fileID: 482421283}
 --- !u!114 &2002824916
@@ -6944,8 +6953,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b2419cf4cbe93d41aeec830fdbd5ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopCatalog: 5
-  _skinnumberchuck: 5
+  _shopCatalog: 0
+  _SkinNumberCheck: 5
+  _price: 200
   _popUp: {fileID: 1873849985}
   _popUp2: {fileID: 482421283}
 --- !u!114 &2054629765
