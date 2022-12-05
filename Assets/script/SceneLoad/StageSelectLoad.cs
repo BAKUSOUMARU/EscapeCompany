@@ -16,20 +16,20 @@ public class StageSelectLoad : SceneLoad
     Text _inpotText;
     public void SelectStage()
     {
-        GameManager.instance.GameReset();
+        GameManager.Instance.GameReset();
         switch (_stagelevel)
         {
             case StageLevel.Normal:
-                GameManager.instance.StageCountSet(20);
-                GameManager.instance.FreeLevelOff();
-                GameManager.instance.FreeStageCountSet(0);
+                StageManager.Instance.StageCountSet(20);
+                StageManager.Instance.FreeLevelOff();
+                StageManager.Instance.FreeStageCountSet(0);
                 LoadScene();
                 break;
 
             case StageLevel.hard:
-                GameManager.instance.StageCountSet(40);
-                GameManager.instance.FreeLevelOff();
-                GameManager.instance.FreeStageCountSet(0);
+                StageManager.Instance.StageCountSet(40);
+                StageManager.Instance.FreeLevelOff();
+                StageManager.Instance.FreeStageCountSet(0);
                 LoadScene();
                 break;
 
@@ -37,8 +37,8 @@ public class StageSelectLoad : SceneLoad
                 if (int.Parse(_inpotText.text) > 0 || _inpotText.text == null)
                 {
                     LoadScene();
-                    GameManager.instance.FreeStageCountSet(int.Parse(_inpotText.text));
-                    GameManager.instance.FreeLevelOn();
+                    StageManager.Instance.FreeStageCountSet(int.Parse(_inpotText.text));
+                    StageManager.Instance.FreeLevelOn();
                 }
                 else
                 {

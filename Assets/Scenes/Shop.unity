@@ -5854,7 +5854,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1725052052}
-        m_TargetAssemblyTypeName: popUPcontroller, Assembly-CSharp
+        m_TargetAssemblyTypeName: PopUpController, Assembly-CSharp
         m_MethodName: PopUp
         m_Mode: 1
         m_Arguments:

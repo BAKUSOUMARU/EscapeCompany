@@ -7,6 +7,6 @@ public class RetryLoad : SceneLoad
     public void LoadRetry()
     {
         LoadScene();
-        GameManager.instance.GameReset();
+        GameManager.Instance.GameReset();
     }
 }

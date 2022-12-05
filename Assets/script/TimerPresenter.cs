@@ -17,7 +17,7 @@ public class TimerPresenter : MonoBehaviour
         _timerController.ObserveEveryValueChanged(x => _timerController.StartCount)
             .Subscribe(x => _timerView.ChangeStartTimer(x)).AddTo(this);
 
-        GameManager.instance.ObserveEveryValueChanged(x=> GameManager.instance.Timer)
+        GameManager.Instance.ObserveEveryValueChanged(x=> GameManager.Instance.Timer)
             .Subscribe(x => _timerView.ChangeTimer(x)).AddTo(this);
     }
 }

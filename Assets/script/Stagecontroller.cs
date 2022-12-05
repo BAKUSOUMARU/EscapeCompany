@@ -9,8 +9,6 @@ public class StageController : MonoBehaviour
     [SerializeField]
     [Header("生成するステージのprefab")]
     GameObject[] _stage;
-
-    GameObject[] _player;
         
     [SerializeField]
     [Header("ゴールステージのprefab")]
@@ -33,11 +31,11 @@ public class StageController : MonoBehaviour
 
     private void Start()
     {
-        Instantiate(GameManager.instance.Playes[GameManager.instance.PlayerSkinNumber], new Vector2(-15f, -3.3f), transform.rotation);
-        Instantiate(GameManager.instance.Enemy[GameManager.instance.EnemySkinNumder], new Vector2(-25f, -3.4f), transform.rotation);
-        if (GameManager.instance.IsFreeLevel)
+        Instantiate(SkinManager.Instance.PlayerSkinList[SkinManager.Instance.NowPlayerSkinNumber].Player, new Vector2(-15f, -3.3f), transform.rotation);
+        Instantiate(SkinManager.Instance.EnemySkinList[SkinManager.Instance.NowEnemySkinNumber].Enemy, new Vector2(-25f, -3.4f), transform.rotation);
+        if (StageManager.Instance.IsFreeLevel)
         {
-            GameManager.instance.StageCountSet(GameManager.instance.FreeLevel);
+            StageManager.Instance.StageCountSet(StageManager.Instance.FreeLevel);
         }
         BackScreenSpawn();
         StageSpawn();
@@ -49,7 +47,7 @@ public class StageController : MonoBehaviour
     public void StageSpawn()
     {
         _stageSpawninterval = 0;
-        for (int i = 0; i < GameManager.instance.StageCount; i++)
+        for (int i = 0; i < StageManager.Instance.StageCount; i++)
         {
             int randomIndex = Random.Range(0, _stage.Length);
             Instantiate(_stage[randomIndex], new Vector2(_stageSpawninterval, 0), transform.rotation);
@@ -65,14 +63,14 @@ public class StageController : MonoBehaviour
     /// </summary>
     public void BackScreenSpawn()
     {
-        if (GameManager.instance.StageCount > 4)
+        if (StageManager.Instance.StageCount > 4)
         {
-            _addBackseason += GameManager.instance.StageCount / 4;
+            _addBackseason += StageManager.Instance.StageCount / 4;
         }
         Debug.Log("出たよ");
         _backScreenSpawnimterval = (float)-14.5;
         
-        for (int i = 0; i < GameManager.instance.StageCount + _addBackseason; i++)
+        for (int i = 0; i < StageManager.Instance.StageCount + _addBackseason; i++)
         {
             Instantiate(_backscreen, new Vector3(_backScreenSpawnimterval, 0f, 10f), transform.rotation);
             _backScreenSpawnimterval += (float)14.5;

@@ -15,7 +15,7 @@ public class TimerController : MonoBehaviour
 
     private void Start()
     {
-        GameManager.instance.StartTimer();
+        GameManager.Instance.GameStartFlagManager.StartTimer();
     }
 
     private void Update()
@@ -25,16 +25,16 @@ public class TimerController : MonoBehaviour
     
     public void Timer()
     {
-        if (GameManager.instance.IsStartTimer)
+        if (GameManager.Instance.GameStartFlagManager.IsStartTimer)
         {
             _startCount -= Time.deltaTime;
         }
         if (_startCount < 0)
         {     
-            GameManager.instance.StartPlayer();
-            GameManager.instance.StartEnemy();
-            GameManager.instance.StopTimer();
-            GameManager.instance.TimerUp();
+            GameManager.Instance.GameStartFlagManager.StartPlayer();
+            GameManager.Instance.GameStartFlagManager.StartEnemy();
+            GameManager.Instance.GameStartFlagManager.StopTimer();
+            GameManager.Instance.TimerUp();
         }
 
     }

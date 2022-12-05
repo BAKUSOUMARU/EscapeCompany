@@ -21,7 +21,7 @@ public class EnemyController : MonoBehaviour
     {
         _rd = GetComponent<Rigidbody2D>();
         _anim = GetComponent<Animator>();
-        GameManager.instance.StopEnemy();
+        GameManager.Instance.GameStartFlagManager.StopEnemy();
     }
 
     void FixedUpdate()
@@ -34,7 +34,7 @@ public class EnemyController : MonoBehaviour
     /// </summary>
     void EnemyMove()
     {
-        if (!GameManager.instance.IsEnemyStop)
+        if (GameManager.Instance.GameStartFlagManager.IsEnemyMove)
         {
             _rd.velocity = _dir.normalized * _speed;
         }
@@ -54,7 +54,7 @@ public class EnemyController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(collision.gameObject);
-            GameManager.instance.GameOver(); 
+            GameManager.Instance.GameOver(); 
         }
     }
 }
