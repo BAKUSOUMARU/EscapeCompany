@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class TimerView : MonoBehaviour
 {
     [SerializeField]
-    [Header("カウントダウンタイマーを映すText")]
+    [Header("繧ｫ繧ｦ繝ｳ繝医ム繧ｦ繝ｳ繧ｿ繧､繝槭�ｼ繧呈丐縺儺ext")]
     Text _startCountText;
 
     [SerializeField]
-    [Header("ゲームプレイ中のtimerを表示させるText")]
+    [Header("繧ｲ繝ｼ繝繝励Ξ繧､荳ｭ縺ｮtimer繧定｡ｨ遉ｺ縺輔○繧亀ext")]
     Text _gamePlayTimerText;
 
     public void ChangeStartTimer(float timer)

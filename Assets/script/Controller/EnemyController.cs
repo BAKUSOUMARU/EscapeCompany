@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
-/// Enemy‚Ìscript
+/// Enemyã®script
 /// </summary>
 public class EnemyController : MonoBehaviour
 {
     [SerializeField]
-    [Header("ˆÚ“®•ûŒü")]
+    [Header("ç§»å‹•æ–¹å‘")]
     Vector2 _dir;
 
     [SerializeField]
-    [Header("ˆÚ“®‘¬“x")]
+    [Header("ç§»å‹•é€Ÿåº¦")]
     float _speed = 2;
 
     Rigidbody2D _rd;
@@ -30,7 +30,7 @@ public class EnemyController : MonoBehaviour
     }
 
     /// <summary>
-    /// Enemy‚Ì“®‚«‚Ìˆ—
+    /// Enemyã®å‹•ãã®å‡¦ç†
     /// </summary>
     void EnemyMove()
     {

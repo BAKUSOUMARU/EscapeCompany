@@ -10,13 +10,13 @@ public class GameStartFlagManager
 
     public bool IsStartTimer => isStartTimer;
 
-    [Header("Enemyを止めるのを検知するフラグ")]
+    [Header("Enemy繧呈ｭ｢繧√ｋ縺ｮ繧呈､懃衍縺吶ｋ繝輔Λ繧ｰ")]
     private static bool isEnemyMove = false;
 
-    [Header("playerを止めるのを検知するフラグ")]
+    [Header("player繧呈ｭ｢繧√ｋ縺ｮ繧呈､懃衍縺吶ｋ繝輔Λ繧ｰ")]
     private static bool isPlayerMove = false;
 
-    [Header("タイマーをスタートさせるフラグ")]
+    [Header("繧ｿ繧､繝槭�ｼ繧偵せ繧ｿ繝ｼ繝医＆縺帙ｋ繝輔Λ繧ｰ")]
     private static bool isStartTimer = false;
 
     public void StartPlayer()

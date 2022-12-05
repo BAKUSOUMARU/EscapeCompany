@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class StageSelectLoad : SceneLoad
 {
     [SerializeField]
-    [Header("‘JˆÚ‚³‚ê‚éæ‚Ì“ïˆÕ“x‚Ìİ’è")]
+    [Header("é·ç§»ã•ã‚Œã‚‹å…ˆã®é›£æ˜“åº¦ã®è¨­å®š")]
     StageLevel _stagelevel;
 
     [SerializeField] GameObject _popup;
 
     [SerializeField]
-    [Header("ƒtƒŠ[ƒŒƒxƒ‹‚Ì“ü—Í‚³‚ê‚éText")]
+    [Header("ãƒ•ãƒªãƒ¼ãƒ¬ãƒ™ãƒ«ã®å…¥åŠ›ã•ã‚Œã‚‹Text")]
     Text _inpotText;
     public void SelectStage()
     {

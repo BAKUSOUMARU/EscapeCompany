@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 /// <summary>
-/// ロード画面のテキストのscript
+/// 繝ｭ繝ｼ繝臥判髱｢縺ｮ繝�繧ｭ繧ｹ繝医�ｮscript
 /// </summary>
 public class LoadingText : MonoBehaviour
 {
     [SerializeField] 
-    [Header("NowLoadingを表示させるText")]
+    [Header("NowLoading繧定｡ｨ遉ｺ縺輔○繧亀ext")]
     Text _loadingText;
     
 

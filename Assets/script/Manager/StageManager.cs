@@ -8,13 +8,13 @@ public class StageManager : SingletonMonoBehaviour<StageManager>
     public int StageCount => _stageCount;
     public bool IsFreeLevel => isFreeLevel;
    
-    [Header("¶¬‚·‚éƒXƒe[ƒW‚Ì”")]
+    [Header("ç”Ÿæˆã™ã‚‹ã‚¹ãƒ†ãƒ¼ã‚¸ã®æ•°")]
     private int _stageCount;
 
-    [Header("ƒtƒŠ[ƒŒƒxƒ‹‚ÌƒXƒe[ƒW‚ğo‚·”")]
+    [Header("ãƒ•ãƒªãƒ¼ãƒ¬ãƒ™ãƒ«ã®ã‚¹ãƒ†ãƒ¼ã‚¸ã‚’å‡ºã™æ•°")]
     private int _freeLevel;
 
-    [Header("freelevel‚ğƒIƒ“‚É‚·‚é‚©")]
+    [Header("freelevelã‚’ã‚ªãƒ³ã«ã™ã‚‹ã‹")]
     private bool isFreeLevel = false;
 
     public void StageCountSet(int setCount)

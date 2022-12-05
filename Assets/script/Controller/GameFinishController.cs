@@ -4,17 +4,17 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// ƒQ[ƒ€I—¹‚Ìˆ—
+/// ã‚²ãƒ¼ãƒ çµ‚äº†æ™‚ã®å‡¦ç†
 /// </summary>
 public class GameFinishController : MonoBehaviour
 {
 
     [SerializeField]
-    [Header("ƒQ[ƒ€I—¹‚ÌŠÔ‚ğ•\¦‚³‚¹‚éText")]
+    [Header("ã‚²ãƒ¼ãƒ çµ‚äº†æ™‚ã®æ™‚é–“ã‚’è¡¨ç¤ºã•ã›ã‚‹Text")]
     Text _timertext;
 
     [SerializeField]
-    [Header("ƒQ[ƒ€I—¹Œã‚Ìˆ—‚Ì•ÏX")]
+    [Header("ã‚²ãƒ¼ãƒ çµ‚äº†æ™‚å¾Œã®å‡¦ç†ã®å¤‰æ›´")]
     Gamefinishmode _gamefinishmode;
     
     void Start()
@@ -27,10 +27,10 @@ public class GameFinishController : MonoBehaviour
         switch (_gamefinishmode)
         {
             case Gamefinishmode.GameOver:
-                _timertext.text = "Ÿ‚Í‘ŞE‚·‚é‚ñ‚¾II";
+                _timertext.text = "æ¬¡ã¯é€€è·ã™ã‚‹ã‚“ã ï¼ï¼";
                 break;
             case Gamefinishmode.GameClear:
-                _timertext.text = "‘ŞE‚Ü‚Å‚ÌŠÔ"@+@GameManager.Instance.Timer.ToString("F2") + "•b";
+                _timertext.text = "é€€è·ã¾ã§ã®æ™‚é–“"ã€€+ã€€GameManager.Instance.Timer.ToString("F2") + "ç§’";
                 break;
             default:
                 break;
@@ -39,7 +39,7 @@ public class GameFinishController : MonoBehaviour
     }
     
     /// <summary>
-    /// ƒQ[ƒ€I—¹Œã‚Ìˆ—Ø‚è‘Ö‚¦
+    /// ã‚²ãƒ¼ãƒ çµ‚äº†æ™‚å¾Œã®å‡¦ç†åˆ‡ã‚Šæ›¿ãˆ
     /// </summary>
     enum Gamefinishmode
     {

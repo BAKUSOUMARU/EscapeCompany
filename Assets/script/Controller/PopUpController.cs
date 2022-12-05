@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PopUpController : MonoBehaviour
 {
-    [Header("0�ȉ��̐������͂��ꂽ���ɏo���|�b�v�A�b�v")]
+    [Header("0以下の数が入力された時に出すポップアップ")]
     public GameObject _popup;
    
     public void PopUp()

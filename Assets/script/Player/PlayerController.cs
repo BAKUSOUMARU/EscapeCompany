@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
-/// player関連のscript
+/// player髢｢騾｣縺ｮscript
 /// </summary>
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
-    [Header("playerの動く速度")]
+    [Header("player縺ｮ蜍輔￥騾溷ｺｦ")]
     float _Speed = 5f;
 
     [SerializeField]
-    [Header("playerのジャンプ力")]
+    [Header("player縺ｮ繧ｸ繝｣繝ｳ繝怜鴨")]
     float _jump = 2f;
 
-    [Header("地面を判定するフラグ")]
+    [Header("蝨ｰ髱｢繧貞愛螳壹☆繧九ヵ繝ｩ繧ｰ")]
     bool _isGround = false;
     
     Rigidbody2D _rd;
@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// playerが動く処理
+    /// player縺悟虚縺丞�ｦ逅�
     /// </summary>
     public void Move() 
     {

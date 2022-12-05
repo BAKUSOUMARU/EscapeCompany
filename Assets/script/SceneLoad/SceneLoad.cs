@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class SceneLoad : MonoBehaviour
 {
     [SerializeField]
-    [Header("ロードするシーンの名前")]
+    [Header("繝ｭ繝ｼ繝峨☆繧九す繝ｼ繝ｳ縺ｮ蜷榊燕")]
     string _scene = default;
 
     public void LoadScene()

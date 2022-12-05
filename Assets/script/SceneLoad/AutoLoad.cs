@@ -8,7 +8,7 @@ public class AutoLoad : SceneLoad
 {
 
     [SerializeField]
-    [Header("ƒ[ƒh‚·‚é‚Ü‚Å‚ÌŠÔ(ƒ~ƒŠ•b)")]
+    [Header("ãƒ­ãƒ¼ãƒ‰ã™ã‚‹ã¾ã§ã®æ™‚é–“(ãƒŸãƒªç§’)")]
     int _delayTime = 5000;
 
     private CancellationTokenSource _cts = new CancellationTokenSource();

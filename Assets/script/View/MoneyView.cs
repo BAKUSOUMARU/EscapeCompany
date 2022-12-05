@@ -8,6 +8,6 @@ public class MoneyView : MonoBehaviour
     [SerializeField] Text _moneyText;
     public void ChangeMoneyText(int money)
     {
-        _moneyText.text = "Š‹à"+money.ToString() + "‰~";
+        _moneyText.text = "æ‰€æŒé‡‘"+money.ToString() + "å††";
     }
 }

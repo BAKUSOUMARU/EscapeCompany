@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 /// <summary>
-/// ƒQ[ƒ€“à‚Éˆê‚Â‚µ‚©‘¶Ý‚µ‚È‚¢ƒQ[ƒ€ƒ}ƒl[ƒWƒƒ[
-/// ‚ÉŠÖ‚·‚éscript
+/// ã‚²ãƒ¼ãƒ å†…ã«ä¸€ã¤ã—ã‹å­˜åœ¨ã—ãªã„ã‚²ãƒ¼ãƒ ãƒžãƒãƒ¼ã‚¸ãƒ£ãƒ¼
+/// ã«é–¢ã™ã‚‹script
 /// </summary>
 public class GameManager : SingletonMonoBehaviour<GameManager>
 {
@@ -13,21 +13,21 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     public GameStartFlagManager GameStartFlagManager => _gameStartFlagManager;
  
-    [Header("ƒQ[ƒ€ƒXƒ^[ƒg‚µ‚Ä‚©‚ç‚ÌŽžŠÔ")]
+    [Header("ã‚²ãƒ¼ãƒ ã‚¹ã‚¿ãƒ¼ãƒˆã—ã¦ã‹ã‚‰ã®æ™‚é–“")]
     private float _timer = 0;
 
     GameStartFlagManager _gameStartFlagManager = new GameStartFlagManager();
 
     /// <summary>
-    /// ƒQ[ƒ€ƒI[ƒo[‚Ìˆ—
+    /// ã‚²ãƒ¼ãƒ ã‚ªãƒ¼ãƒãƒ¼ã®å‡¦ç†
     /// </summary>
     public void GameOver()
     {
-        Debug.Log("ƒQ[ƒ€I—¹");
+        Debug.Log("ã‚²ãƒ¼ãƒ çµ‚äº†");
         SceneManager.LoadScene("GameOver");
     }
     /// <summary>
-    /// ƒQ[ƒ€ƒNƒŠƒA‚Ìˆ—
+    /// ã‚²ãƒ¼ãƒ ã‚¯ãƒªã‚¢ã®å‡¦ç†
     /// </summary>
     public void GameClear()
     {

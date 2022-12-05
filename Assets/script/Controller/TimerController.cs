@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
-///　ゲーム開始時のカウントダウンタイマーのscript
+///縲繧ｲ繝ｼ繝髢句ｧ区凾縺ｮ繧ｫ繧ｦ繝ｳ繝医ム繧ｦ繝ｳ繧ｿ繧､繝槭�ｼ縺ｮscript
 /// </summary>
 public class TimerController : MonoBehaviour
 {
     public float StartCount => _startCount;
     
     [SerializeField]
-    [Header("スタートするまでのカウントダウン時間")]
+    [Header("繧ｹ繧ｿ繝ｼ繝医☆繧九∪縺ｧ縺ｮ繧ｫ繧ｦ繝ｳ繝医ム繧ｦ繝ｳ譎る俣")]
     float _startCount = 3;
 
 

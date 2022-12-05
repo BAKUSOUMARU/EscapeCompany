@@ -2,24 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
-/// ƒXƒe[ƒW‚ÌŽ©“®¶¬‚Ìscript
+/// ã‚¹ãƒ†ãƒ¼ã‚¸ã®è‡ªå‹•ç”Ÿæˆã®script
 /// </summary>
 public class StageController : MonoBehaviour
 {
     [SerializeField]
-    [Header("¶¬‚·‚éƒXƒe[ƒW‚Ìprefab")]
+    [Header("ç”Ÿæˆã™ã‚‹ã‚¹ãƒ†ãƒ¼ã‚¸ã®prefab")]
     GameObject[] _stage;
         
     [SerializeField]
-    [Header("ƒS[ƒ‹ƒXƒe[ƒW‚Ìprefab")]
+    [Header("ã‚´ãƒ¼ãƒ«ã‚¹ãƒ†ãƒ¼ã‚¸ã®prefab")]
     GameObject _goalObject;
 
     [SerializeField]
-    [Header("¶¬‚·‚é”wŒi‚Ìprefab")]
+    [Header("ç”Ÿæˆã™ã‚‹èƒŒæ™¯ã®prefab")]
     GameObject _backscreen;
 
     [SerializeField]
-    [Header("Ž©“®¶¬‚Å‘«‚è‚È‚¢•ª‚Ì”wŒi‚ð’Ç‰Á‚·‚é”")]
+    [Header("è‡ªå‹•ç”Ÿæˆã§è¶³ã‚Šãªã„åˆ†ã®èƒŒæ™¯ã‚’è¿½åŠ ã™ã‚‹æ•°")]
     int _addBackseason = 3;
 
    
@@ -42,7 +42,7 @@ public class StageController : MonoBehaviour
     }
 
     /// <summary>
-    /// ƒXƒe[ƒW‚ð¶¬‚·‚éˆ—
+    /// ã‚¹ãƒ†ãƒ¼ã‚¸ã‚’ç”Ÿæˆã™ã‚‹å‡¦ç†
     /// </summary>
     public void StageSpawn()
     {
@@ -54,12 +54,12 @@ public class StageController : MonoBehaviour
             _stageSpawninterval += 18f;
         }
         
-        @Instantiate(_goalObject, new Vector2(_stageSpawninterval, 0), transform.rotation);
+        ã€€Instantiate(_goalObject, new Vector2(_stageSpawninterval, 0), transform.rotation);
         
     }
 
     /// <summary>
-    /// ”wŒi‚ð¶¬‚·‚éˆ—
+    /// èƒŒæ™¯ã‚’ç”Ÿæˆã™ã‚‹å‡¦ç†
     /// </summary>
     public void BackScreenSpawn()
     {
@@ -67,7 +67,7 @@ public class StageController : MonoBehaviour
         {
             _addBackseason += StageManager.Instance.StageCount / 4;
         }
-        Debug.Log("o‚½‚æ");
+        Debug.Log("å‡ºãŸã‚ˆ");
         _backScreenSpawnimterval = (float)-14.5;
         
         for (int i = 0; i < StageManager.Instance.StageCount + _addBackseason; i++)

@@ -1,7 +1,7 @@
 using UnityEngine;
 
 /// <summary>
-/// ƒVƒ“ƒOƒ‹ƒgƒ“ƒpƒ^[ƒ“‚ðŽÀ‘•‚µ‚½‚¢Žž‚ÉŒp³‚·‚éƒWƒFƒlƒŠƒbƒN‚ÈŠî’êƒNƒ‰ƒX
+/// ã‚·ãƒ³ã‚°ãƒ«ãƒˆãƒ³ãƒ‘ã‚¿ãƒ¼ãƒ³ã‚’å®Ÿè£…ã—ãŸã„æ™‚ã«ç¶™æ‰¿ã™ã‚‹ã‚¸ã‚§ãƒãƒªãƒƒã‚¯ãªåŸºåº•ã‚¯ãƒ©ã‚¹
 /// </summary>
 /// <typeparam name="T"></typeparam>
 public class SingletonMonoBehaviour<T> : MonoBehaviour where T : MonoBehaviour
@@ -16,7 +16,7 @@ public class SingletonMonoBehaviour<T> : MonoBehaviour where T : MonoBehaviour
 
                 if (_instance == null)
                 {
-                    Debug.LogError($"{typeof(T)}‚ðƒAƒ^ƒbƒ`‚µ‚Ä‚¢‚éGameObject‚ª‚ ‚è‚Ü‚¹‚ñ");
+                    Debug.LogError($"{typeof(T)}ã‚’ã‚¢ã‚¿ãƒƒãƒã—ã¦ã„ã‚‹GameObjectãŒã‚ã‚Šã¾ã›ã‚“");
                 }
             }
 
