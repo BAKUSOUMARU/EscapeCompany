@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class SkinManager : SingletonMonoBehaviour<SkinManager>
 {
+    public GameObject[] Player => _player;
+    public GameObject[] Enemy => _enemy;
 
-    public List<PlayerSkin> PlayerSkinList = new List<PlayerSkin>();
+    [SerializeField]
+    GameObject[] _player;
 
-    public List<EnemySkin> EnemySkinList = new List<EnemySkin>();
-
+    [SerializeField]
+    GameObject[] _enemy;
     public int NowPlayerSkinNumber => _nowPlayerSkinNumber;
 
     public int NowEnemySkinNumber => _nowEnemySkinNumder;
@@ -25,41 +28,5 @@ public class SkinManager : SingletonMonoBehaviour<SkinManager>
     public void EnemySkinNumberSet(int setSkinNumber)
     {
         _nowEnemySkinNumder = setSkinNumber;
-    }
-}
-
-[System.SerializableAttribute]
-public class PlayerSkin
-{
-    public GameObject Player => _player;
-    public bool IsSkinBuy => isSkinBuy;
-
-    [SerializeField]
-    GameObject _player;
-
-    [SerializeField]
-    bool isSkinBuy = false;
-
-    public void BuySkin()
-    {
-        isSkinBuy = true;
-    }
-}
-
-[System.SerializableAttribute]
-public class EnemySkin
-{
-    public GameObject Enemy => _enemy;
-    public bool IsSkinBuy => isSkinBuy;
-
-    [SerializeField]
-    GameObject _enemy;
-
-    [SerializeField]
-    bool isSkinBuy = false;
-
-    public void BuySkin()
-    {
-        isSkinBuy = true;
     }
 }

@@ -38,15 +38,16 @@ public class ShopController : MonoBehaviour
         {
             _popUp2.SetActive(true);
         }
-        else if (SkinManager.Instance.PlayerSkinList[_SkinNumberCheck].IsSkinBuy)
+        else if (SaveDataManager.Instance.PlayerSkinCheck(_SkinNumberCheck))
         {
             SkinManager.Instance.PlayerSkinNumberSet(_SkinNumberCheck);
         }
-        else if (MoneyManager.Instance.Money > price--)
+        else if (SaveDataManager.Instance.Money >= price--)
         {
-            MoneyManager.Instance.MoneyDown(price);
+            SaveDataManager.Instance.MoneyDown(price);
             SkinManager.Instance.PlayerSkinNumberSet(_SkinNumberCheck);
-            SkinManager.Instance.PlayerSkinList[_SkinNumberCheck].BuySkin();
+            SaveDataManager.Instance.PlayerSkinBuy(_SkinNumberCheck);
+            SaveDataManager.Instance.Save();
         }
         else
         {
@@ -60,15 +61,16 @@ public class ShopController : MonoBehaviour
         {
             _popUp2.SetActive(true);
         }
-        else if (SkinManager.Instance.EnemySkinList[_SkinNumberCheck].IsSkinBuy)
+        else if (SaveDataManager.Instance.EnemySkintCheck(_SkinNumberCheck))
         {
             SkinManager.Instance.EnemySkinNumberSet(_SkinNumberCheck);
         }
-        else if (MoneyManager.Instance.Money > price--)
+        else if (SaveDataManager.Instance.Money >= price--)
         {
-            MoneyManager.Instance.MoneyDown(price);
+            SaveDataManager.Instance.MoneyDown(price);
             SkinManager.Instance.EnemySkinNumberSet(_SkinNumberCheck);
-            SkinManager.Instance.EnemySkinList[_SkinNumberCheck].BuySkin();
+            SaveDataManager.Instance.EnemySkinBuy(_SkinNumberCheck);
+            SaveDataManager.Instance.Save();
         }
         else
         {

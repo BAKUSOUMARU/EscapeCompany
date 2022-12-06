@@ -31,7 +31,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     /// </summary>
     public void GameClear()
     {
-        MoneyManager.Instance.MoneyUp(StageManager.Instance.StageCount * 2); 
+        SaveDataManager.Instance.MoneyUp(StageManager.Instance.StageCount * 2); 
         _gameStartFlagManager.StartPlayer();
         SceneManager.LoadScene("GameClear");
     }

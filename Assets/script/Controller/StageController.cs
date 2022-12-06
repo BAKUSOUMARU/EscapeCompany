@@ -31,8 +31,8 @@ public class StageController : MonoBehaviour
 
     private void Start()
     {
-        Instantiate(SkinManager.Instance.PlayerSkinList[SkinManager.Instance.NowPlayerSkinNumber].Player, new Vector2(-15f, -3.3f), transform.rotation);
-        Instantiate(SkinManager.Instance.EnemySkinList[SkinManager.Instance.NowEnemySkinNumber].Enemy, new Vector2(-25f, -3.4f), transform.rotation);
+        Instantiate(SkinManager.Instance.Player[SkinManager.Instance.NowPlayerSkinNumber], new Vector2(-15f, -3.3f), transform.rotation);
+        Instantiate(SkinManager.Instance.Enemy[SkinManager.Instance.NowEnemySkinNumber], new Vector2(-25f, -3.4f), transform.rotation);
         if (StageManager.Instance.IsFreeLevel)
         {
             StageManager.Instance.StageCountSet(StageManager.Instance.FreeLevel);

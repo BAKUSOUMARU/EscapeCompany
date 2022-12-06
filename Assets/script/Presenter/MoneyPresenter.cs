@@ -10,7 +10,7 @@ public class MoneyPresenter : MonoBehaviour
 
     private void Start()
     {
-        MoneyManager.Instance.ObserveEveryValueChanged(x => MoneyManager.Instance.Money)
+        SaveDataManager.Instance.ObserveEveryValueChanged(x => SaveDataManager.Instance.Money)
             .Subscribe(x => _moneyView.ChangeMoneyText(x)).AddTo(this); 
     }
 }
