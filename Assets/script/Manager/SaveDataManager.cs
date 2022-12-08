@@ -6,7 +6,7 @@ using System.IO;
 [System.Serializable]
 public class SaveData
 {
-    public int money;
+    public int money = 0;
 
     public string[] playerSkinBuyCheck;
 
