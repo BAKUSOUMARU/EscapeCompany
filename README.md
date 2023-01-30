@@ -6,7 +6,7 @@
   
   3. [使用技術](https://github.com/BAKUSOUMARU/EscapeCompany#使用技術)<BR>
   
-  4.  [使用言語、環境](https://github.com/BAKUSOUMARU/EscapeCompany#使用言語、環境)<BR>
+  4.  [使用言語、環境](https://github.com/BAKUSOUMARU/EscapeCompany#使用言語環境)<BR>
   ## インストール方法
 [インストールURL](https://github.com/BAKUSOUMARU/EscapeCompany/releases/download/3.1/EscapeCompany.zip)<BR>
 ↑こちらをクリックorReleaseからEscapeCompany.zipダウンロードする。
