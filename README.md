@@ -12,7 +12,8 @@
 ↑こちらをクリックorReleaseからEscapeCompany.zipダウンロードする。
 
   ## 遊び方
-    [説明書](https://github.com/BAKUSOUMARU/EscapeCompany/blob/main/Assets/sprite/BackScreen/tutorial.png)<BR>
+    
+  [説明書](https://github.com/BAKUSOUMARU/EscapeCompany/blob/main/Assets/sprite/BackScreen/tutorial.png)<BR>
   
   ## 使用技術
   - UniRXを使ったMVRPパターン
