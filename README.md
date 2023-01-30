@@ -22,6 +22,8 @@
   [AutoLoad.cs](https://github.com/BAKUSOUMARU/EscapeCompany/blob/main/Assets/script/SceneLoad/AutoLoad.cs)<BR>
   - Jsonを使用したセーブ機能
   [SaveDataManager.cs](https://github.com/BAKUSOUMARU/EscapeCompany/blob/main/Assets/script/Manager/SaveDataManager.cs)<BR>
+  - 単一責任
+  
   
   
 ### 使用言語、環境
